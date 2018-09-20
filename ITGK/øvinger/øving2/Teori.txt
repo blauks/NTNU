@@ -1,0 +1,18 @@
+1. Primærlagring (RAM) er stedet hvor data blir lagret når programmet kjører, primærlagring har ofte lite plass men er veldig rask. Sekundærlagring brukes til å lagre programmer og data
+som ikke er øyeblikkelig i bruk av datamaskinen, sekundærlagring har mer plass men er treigere til å lese/skrive data enn primærlagringen.
+2. Harddisk: 
+			- Permanent minne
+			- ikke volatilt 
+			- Direkte aksess
+    SSD:
+			- Permanent
+			- Direkte aksess
+			
+	RAM: 
+			- Volatilt 
+			- Ikke permanent 
+			- tilfeldig aksess
+3. Silisium blir brukt mye i elektronikken siden det er en halvleder, som gjør at man kan velge når den skal slippe gjennom strøm eller ikke. Det er også veldig billig.
+4. En transistor er et komponent som blir mye brukt i datamaskiner. Når transistoren får et signal om at den skal slippe gjennom slipper den strøm igjen, det er som en
+bryter uten bevegelige deler.
+5. 6400 bits i sekundet

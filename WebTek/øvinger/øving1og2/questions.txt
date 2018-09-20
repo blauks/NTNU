@@ -1,0 +1,5 @@
+1. Inline CSS overrides rules defined in style elements and external stylesheets, because it is more specific.  
+2. You should use ID when you want to change css attributes to one specific tag/element, while you can use class to change the css attributes of multiple tags/elements.
+3. RGBA stands for Red Green Blue Alpha, and you can express all colours with it. 
+4. We include the css file in the head element so that the css specifications are declared before the information within the body.
+5. article { } 

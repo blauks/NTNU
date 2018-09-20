@@ -1,0 +1,18 @@
+/*****************
+    GENERELT
+*****************/
+body{
+    font-family: sans-serif;
+    background-image: url("https://i.redd.it/qogg9j9o5oi11.gif");
+    background-size: 150px;
+}
+
+#main{
+    background: #fafafa;
+    width: 60%;
+    padding: 15px;
+    border: rgb(13, 243, 185) 1px solid;
+    margin: 20px auto;
+    box-shadow: #2a2a2a 5px 5px 1px 1px;
+}
+

@@ -1,0 +1,4 @@
+1. position: absolute positions the element in relation to its containing element, while position: fixed is in relation to the browser window.
+2. "element" "element-tag":nth-child(3){
+  color: aquamarine;
+}

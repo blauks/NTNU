@@ -1,0 +1,16 @@
+body{
+    background-color: lightblue;
+}
+
+header{
+    font-family: Verdana;
+}
+
+p, ol, footer {
+    font-family: Verdana, sans-serif, 'Times New Roman';
+}
+
+img {
+    max-width: 150px;
+    border: green 2px solid;
+}

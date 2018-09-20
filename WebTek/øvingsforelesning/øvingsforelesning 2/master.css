@@ -1,0 +1,36 @@
+body {
+    max-width: 800px;
+    color: #454545;
+    background-color: #fefefe;
+    font-size: 14pt;
+    line-height: 1.4;
+    text-align: justify;
+    margin: auto;
+}
+
+.infobox {
+    border-style: solid;
+    max-width: 250px;
+    padding: 1em;
+    margin-top: 25px;
+}
+
+.review {
+    max-width: 550px;
+}
+
+#poster {
+    height: 360px;
+    position: fixed;
+    right: 370px;   
+}
+
+.review img{
+position: fixed;
+right: 25px;
+top: 25px;
+}
+
+a:hover{
+    background-color: green;
+}
