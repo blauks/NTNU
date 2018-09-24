@@ -13,10 +13,23 @@
   }
 
   @media (max-width: 940px){
+    video{
+      display: none;
+    }
     
+    img{
+      display: inline;
+    }
   }
 
-  video {
+  @media (min-width: 941px){
+    #mobil{
+      display: none;
+      }
+  }
+
+
+  video, img{
     height: auto;
     width: 100%;
   }
