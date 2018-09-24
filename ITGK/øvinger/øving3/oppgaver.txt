@@ -1,0 +1,12 @@
+1. 
+- Instruksjons-henting
+- Instruksjons-dekoding
+- Data-henting / Operand-henting 
+- Instruksjons-eksevering 
+- Resultat-retur
+
+2. 
+Datahenting 
+
+3. 
+
