@@ -3,10 +3,10 @@ som ikke er øyeblikkelig i bruk av datamaskinen, sekundærlagring har mer plass
 2. Harddisk: 
 			- Permanent minne
 			- ikke volatilt 
-			- Direkte aksess
+			- Sekvensiell aksess
     SSD:
 			- Permanent
-			- Direkte aksess
+			- Tilfeldig aksess
 			
 	RAM: 
 			- Volatilt 
