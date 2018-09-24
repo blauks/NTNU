@@ -12,6 +12,10 @@
     position: relative;
   }
 
+  @media (max-width: 940px){
+    
+  }
+
   video {
     height: auto;
     width: 100%;
