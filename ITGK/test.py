@@ -1,7 +1,7 @@
-def funk(a):
-    sum = a * a
-    print(a,"*",a,"=",sum)
+import math
 
+def areal_sirkel(r, pi):
+    A = pi * r**2
+    print("r =", r, ", A =", A)
 
-while True:
-    funk(int(input("Tall: ")))
+areal_sirkel(float(input("Skriv inn radiusen til sirkelen: ")), math.pi)
