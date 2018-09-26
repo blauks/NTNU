@@ -1,3 +1,6 @@
 1. Mobile phones usually ignore autoplay to save data.
-2. Ingenting skjer
-3. 
+2. Nothing happens
+3. Advantages:
+- Less coding 
+- A single website for all devices is easier to maintain
+
