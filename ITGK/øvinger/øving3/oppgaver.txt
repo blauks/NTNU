@@ -9,4 +9,15 @@
 Datahenting 
 
 3. 
+Oppgaven til programtelleren er å lagre addressen til den neste instruksjonen
 
+4. 
+Forventet klokkehastighet på en moderne datamaskin er mellom 2-3 GHz
+
+5. 
+SSD står for solid state drive
+
+6. 
+Forskjellen mellom SSD og HDD er at SSD er digital mens HDD er analog 
+
+7. Hovedoppgaven til ALU er å utføre regneoperasjoner
