@@ -1,0 +1,15 @@
+import random as r
+
+da kan man bruke r.random() i steden for random.random()
+
+return 1, 2 //for å returnere flere verdier 
+
+
+
+
+
+negative tall: negative binære tall starter med 1 mens positive starter med 0
+ulemper er at man får to nuller
+ikke brukbar
+
+
