@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IT2805 assignment 5: JavaScript introduction</title>
+
+    <style>
+      .box{
+        /* Sets the size and position of each box */
+        width: 200px;
+        height: 200px;
+        background-color: #185D8B;
+        margin: 10px;
+
+        /* Sets the font within each box*/
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+        line-height: 200px;
+        font-size: 100px;
+      }
+
+      .buttons{
+        width: 200px;
+        margin: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 id='title'></h1>
+
+    <h2>Part 5</h2>
+    <div class='buttons'>
+      <!--Uses onclick to call the correct function from javascript when the button is pressed-->
+      <button onclick="changeDisplay()">Display: none </button>
+      <button onclick="changeVisibility()">Visibility: hidden</button>
+      <button onclick="reset()">Reset</button>
+    </div>
+    <div class='box' id='magic'> 1 </div>
+    <div class='box'> 2 </div>
+
+    <h2>Part 6</h2>
+    <ul id='tech'>
+    </ul>
+
+    <script src="script.js"></script>
+    <!--You include the javascript at the bottom of the body part, so that the user can see that the 
+    page(HTML and CSS) has loaded before the javascript starts-->
+  </body>
+</html>
