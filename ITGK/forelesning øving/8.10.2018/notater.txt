@@ -1,0 +1,1 @@
+Sekvens: et objekt som inneholder flere dataenheter

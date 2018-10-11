@@ -1,0 +1,4 @@
+2^n, første tall er indeks 0 (n = 0) 
+101 = 2² + 2⁰ = 5
+
+

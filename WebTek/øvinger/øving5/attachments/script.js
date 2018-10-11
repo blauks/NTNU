@@ -66,3 +66,9 @@ const technologies = [
     'Bootstrap',
     'Node.js'
 ];
+
+/* The for loop goes through all the elements in the list, and then adds it in the unordered list with id tech
+ as list elements */
+for(let T = 0; T < technologies.length;T++){
+    document.getElementById("tech").innerHTML += "<li>" + technologies[T] + "</li>"
+}

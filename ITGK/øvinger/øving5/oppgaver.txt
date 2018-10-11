@@ -1,0 +1,23 @@
+1. 
+4,294,967,295 = 2³²
+
+2. 
+1920*1080 = 2073600 
+2073600/8 = 259200 bytes
+
+3. 
+Digital to analog converter
+
+4. 
+18 i totallsystemet er 10010
+18 i 16-tallssystemet er 12
+
+5. 
+0101 0000 0100 1111 0101 0000
+
+6. 
+En piksel er et lite punkt på en dataskjerm, som representerer en farge. Mange piksler sammen kan representere et bilde, brukes til å vise ting på skjerm.
+
+7. 
+Analog lyd er en kontinuerlig frekvens, mens digital lyd er mange "samples" slått sammen til å presentere en lyd (representert i bits) 
+ 
