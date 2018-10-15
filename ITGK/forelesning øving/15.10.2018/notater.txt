@@ -1,0 +1,13 @@
+Metoder og funksjoner for lister:
+
+.append legger til elementer i liste
+.extend legger til elementer individuelt i en liste
+.index sjekker hvor i en list elementet er
+
+liste1 = [1,2,3]
+liste2 = [1,2,3]
+
+liste1.append[14,15]
+liste1 = [1,2,3,[14,15]]
+
+

@@ -1,0 +1,86 @@
+    <!DOCTYPE html>
+    <html lang="uk">
+        <head>
+            <title>Tax form</title>
+            <meta charset="utf-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <h1>Tax form</h1>
+            <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">  
+                <label for="fullname">
+                    Your full name:
+                    <br>
+                    <input type="text" id="fullname" name="fullname" required>
+                    <br>
+                </label>
+            <br>
+                <label for="gender">
+                    Your gender:
+                    <br>
+                    <select id="gender" name="gender" required>
+                        <option disabled selected value>Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
+                </label>
+            <br>
+                <label for="email">
+                    Your email:
+                    <br>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                </label>
+            <br>
+                <label for="birthday">
+                    Your birthday:
+                    <br>
+                    <input type="date" id="birthday" name="birthday" max="1988-12-31" required>
+                    <br>
+                </label>
+            <br>
+                <label for="heroname">
+                    Your hero name:
+                    <br>
+                    <input type="text" id="heroname" name="heroname" required>
+                    <br>
+                </label>
+            <br>
+                <label>
+                    Do you wear spandex?
+                </label>
+                    <br>
+                    <input type="radio" name="spandex" id="true" value="true" required>
+                        <label for="true">Yes</label>
+                    <input type="radio" name="spandex" id="false" value="true">
+                        <label for="false">No</label>
+                    <br>        
+            <br>
+                 <label for="strength">
+                    How strong are you on a scale from 1 to 10?
+                    <br>
+                    <input type="number" id="strength" name="strength" min="1" max="10" value="1" required>
+                    <br>
+                </label>
+            <br>
+                <label for="speed">
+                        How fast are you on a scale from 1 to 10?
+                        <br>
+                        <input type="number" id="speed" name="speed" min="1" max="10" value="1" required>
+                        <br>
+                </label>    
+            <br>  
+                <label for="intelligence">
+                    How smart are you on a scale from 1 to 10?
+                    <br>
+                    <input type="number" id="intelligence" name="intelligence" min="1" max="10" value="1" required>
+                    <br>
+                </label>   
+            <br>             
+                <input type="submit" value="Submit tax form">
+            </form>
+        </body>
+    </html>
