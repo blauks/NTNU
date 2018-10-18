@@ -1,5 +1,5 @@
     <!DOCTYPE html>
-    <html lang="uk">
+    <html lang="en-uk">
         <head>
             <title>Tax form</title>
             <meta charset="utf-8"/>
@@ -35,10 +35,10 @@
                     <br>
                 </label>
             <br>
-                <label for="birthday">
+                <label for="birthdate">
                     Your birthday:
                     <br>
-                    <input type="date" id="birthday" name="birthday" max="1988-12-31" required>
+                    <input type="date" id="birthdate" name="birthdate" max="1988-12-31" required>
                     <br>
                 </label>
             <br>
@@ -62,25 +62,47 @@
                  <label for="strength">
                     How strong are you on a scale from 1 to 10?
                     <br>
-                    <input type="number" id="strength" name="strength" min="1" max="10" value="1" required>
+                    <input type="number" id="strength" name="strength" min="1" max="10" placeholder="Choose your strength" required>
                     <br>
                 </label>
             <br>
                 <label for="speed">
                         How fast are you on a scale from 1 to 10?
                         <br>
-                        <input type="number" id="speed" name="speed" min="1" max="10" value="1" required>
+                        <input type="number" id="speed" name="speed" min="1" max="10" placeholder="Choose your speed" required>
                         <br>
                 </label>    
             <br>  
                 <label for="intelligence">
                     How smart are you on a scale from 1 to 10?
                     <br>
-                    <input type="number" id="intelligence" name="intelligence" min="1" max="10" value="1" required>
+                    <input type="number" id="intelligence" name="intelligence" min="1" max="10" placeholder="Choose your intelligence" required>
                     <br>
                 </label>   
-            <br>             
+            <br>           
+            <label for="income">
+                Income:
+                <br>
+                <input type="number" name="income" id="income" min="0" onkeyup="tax()" required>
+            </label>
+            <br>
+            <label for="savings">
+                Savings:
+                <br>
+                <input type="number" name="savings" id="savings" min="0" onkeyup="tax()" required>
+                <br>
+            </label>
+            <br>
+            <label for="taxes">
+                Taxes:
+                <br>
+                <input type="text" name="taxes" id="taxes" readonly>
+                <br>
+            </label>
+            <br>
+            <br>
                 <input type="submit" value="Submit tax form">
             </form>
+            <script src="script.js"></script>
         </body>
     </html>

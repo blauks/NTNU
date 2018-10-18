@@ -1,0 +1,23 @@
+1.
+I application layer
+
+2. 
+Paritet fungerer som en feildeteksjonsmetode, fordi den undersøker hver byte av data og setter inn en niende bit som er 1 hvis antall enere er et oddetall og null dersom
+antall enere er et partall. Om da byten har et ulikt antall enere er det korrekt. 
+
+3. 
+Circuit switching oppretter en direkte sammenkobling mellom to datamaskiner/mobiltelefoner og sender informasjon i en stor "packet", mens "packet" switching deler opp 
+informasjonen som skal bli sendt i mindre "packets" og sender de gjennom forskjellige noder hvor de ender opp i samme endepunkt
+
+4.
+Ruteren sin oppgave er å dirigere packets til riktig sted
+
+5. 
+Protokollen sin oppgave i nettverkssammenheng er å samle alle prosesser, krav og begrensinger for å fullføre kommunikasjon mellom datamaskiner.
+
+6. 
+Layer 1: Physical
+Layer 2: Network interface
+Layer 3: Internet
+Layer 4: Transport
+Layer 5: Application

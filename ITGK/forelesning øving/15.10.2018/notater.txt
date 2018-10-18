@@ -3,11 +3,38 @@ Metoder og funksjoner for lister:
 .append legger til elementer i liste
 .extend legger til elementer individuelt i en liste
 .index sjekker hvor i en list elementet er
+.insert(index,item)
+.sort()
+.remove
+.reverse
+.pop 
+
+del *element* sletter et element 
 
 liste1 = [1,2,3]
 liste2 = [1,2,3]
 
 liste1.append[14,15]
 liste1 = [1,2,3,[14,15]]
+
+2d lister:
+liste = [[1,2],[3,4],[5,6]]
+liste[0][1] = 2
+
+
+tabell_10x10 = [[0 for col in range(10)] for row in range(10)]
+
+tuppel = c# array
+tuppelNavn = (element1, element2)
+funksjonen list() gjør tuppel om til liste
+funksjonen tuple() gjør liste om til tuple
+
+mer om strenger?
+tekst = "Dette er en streng"
+tekst[0] = "D"
+tekst[7] = "e"
+
+teori: 
+
 
 
