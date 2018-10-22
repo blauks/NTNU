@@ -1,2 +1,2 @@
 # NTNU
-jonathanNTNU
+Jonathans personlige kokebok
