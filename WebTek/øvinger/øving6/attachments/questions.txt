@@ -1,16 +1,16 @@
 1. 
-It will evaluate false because floats in javascript are not accurate
+It will evaluate false because floats in javascript are not accurate. 
 
 2. 
 The method attribute on a form decides which HTTP method to send data with, either GET or POST. 
 
 3. 
 The form fields appear in the URL when the method on form element is changed to GET, so that the website 
-can use the information from the form
+can use the information from the URL
 
 4.
 It is considered bad practice to only validate form input with HTML5 and/or javascript, because the user can
 edit the HTML and javascript code so that he/she can put whatever they want to in the form
 
 5.
-When you want to write a lot, or you want to write multiple lines. 
+It is appropriate to use textarea over input when you know that the user is going to write a lot or use multiple lines

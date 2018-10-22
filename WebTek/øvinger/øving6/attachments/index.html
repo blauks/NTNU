@@ -1,5 +1,5 @@
     <!DOCTYPE html>
-    <html lang="en-uk">
+    <html lang="en">
         <head>
             <title>Tax form</title>
             <meta charset="utf-8"/>
@@ -9,10 +9,10 @@
         <body>
             <h1>Tax form</h1>
             <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">  
-                <label for="fullname">
+                <label for="name">
                     Your full name:
                     <br>
-                    <input type="text" id="fullname" name="fullname" required>
+                    <input type="text" id="name" name="name" pattern="[A-Za-zæøåÆØÅüÜöÖ ]+" required>
                     <br>
                 </label>
             <br>
@@ -42,10 +42,10 @@
                     <br>
                 </label>
             <br>
-                <label for="heroname">
+                <label for="hero">
                     Your hero name:
                     <br>
-                    <input type="text" id="heroname" name="heroname" required>
+                    <input type="text" id="hero" name="hero" required>
                     <br>
                 </label>
             <br>
@@ -55,7 +55,7 @@
                     <br>
                     <input type="radio" name="spandex" id="true" value="true" required>
                         <label for="true">Yes</label>
-                    <input type="radio" name="spandex" id="false" value="true">
+                    <input type="radio" name="spandex" id="false" value="false">
                         <label for="false">No</label>
                     <br>        
             <br>
@@ -83,20 +83,22 @@
             <label for="income">
                 Income:
                 <br>
-                <input type="number" name="income" id="income" min="0" onkeyup="tax()" required>
+                <input type="number" name="income" id="income" min="0" onkeyup="taxes()" onchange="taxes()" required>
             </label>
             <br>
-            <label for="savings">
-                Savings:
+            <label for="wealth">
+                Your wealth:
                 <br>
-                <input type="number" name="savings" id="savings" min="0" onkeyup="tax()" required>
+                <input type="number" name="wealth" id="wealth" min="0" onkeyup="taxes()" onchange="taxes()" required>
+                <!--I use onkeyup and change so that the value will update when the user either types in a value or decides to
+                use the arrows to choose a value-->
                 <br>
             </label>
             <br>
-            <label for="taxes">
+            <label for="tax">
                 Taxes:
                 <br>
-                <input type="text" name="taxes" id="taxes" readonly>
+                <input type="text" name="tax" id="tax" readonly>
                 <br>
             </label>
             <br>
