@@ -1,0 +1,42 @@
+f = open("filnavn"," evt også tilgang")
+        "r" for lesning
+        "w" for skriving, lager en ny hvis den ikke finnes
+
+read
+readline
+readlines
+write
+writelines 
+seek
+tell 
+close
+
+oppg.1 
+filnavn = input("Hvilken fil vil du lese fra? ")
+fil = open(filnavn,"r")
+for linje in fil:
+    if int(linje != None):
+        tall = int(linje)
+        print(tall**2)
+fil.close()
+
+teori:
+Linje-svitsjing: mekanismer som oppretter en dedikert kommunikasjonskanal mellom sender og mottaker. Kommunikasjon mellom to 
+endepunkter
+
+Pakke-svitsjing: kommunikasjonskanalene er delt mellom ulike parter. Hver melding deles inn i mindre blokker med data, disse kalles
+pakker eller datagram
+
+LAN(local Area Network) MAN(Metropolitan Area Network) WAN (Wide Area Network)
+ 
+Hver datamaskin i et pakkesvitsjet LAN har en unik MAC addresse 
+
+MAC addressen består av en 48bits binær verdi delt inn i to 3bytes blokker
+Bit7 i den første blokken spesifiserer om OUI er globalt unik eller lokalt tilordnet
+Bit8 i den første blokken spesifiserer henholdsvis om addressen er unicast eller multicast
+
+unicast = en enkelt datamaskin på nettverket
+multicast = subsett av datamaskiner på nettverket
+
+rutere: bruker protokoller for å støtte kommunikasjon mellom ulike typer nettverk
+

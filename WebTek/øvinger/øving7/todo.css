@@ -1,0 +1,15 @@
+body {
+    width: 60%;
+    min-height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#completed, #list {
+    font-size: 20px;
+}
+
+#list{
+    position: relative;
+    right: 20px;    
+}
