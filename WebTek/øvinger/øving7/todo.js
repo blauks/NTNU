@@ -11,12 +11,15 @@ var tasksAndDate = [] //To store the task and the variable from the now function
 //and the tasksAndDate could be useful if I ever want to check when it was made
 
 function addTask(){
-    let todo = textField.value
-    if(todo != "" && !tasks.includes(todo)){
-        todoList.innerHTML = "<li><input onClick='checkboxFunc(this.name)' name="+todo+" type='checkbox'><label id="+todo+">"+todo+"</label></input></li>" + todoList.innerHTML
+    if(todo.trim() != "" && !tasks.includes(todo)){
+       /* todoList.innerHTML = "<li><input onClick='checkboxFunc(this.name)' name="+todo+" type='checkbox'><label id="+todo+">"+todo+"</label></input></li>" + todoList.innerHTML
+        //I could have used appendchild and all that to add tasks, but this method was easier for me
         tasks.push(todo)
         tasksAndDate.push(todo,Date.now())
-        textField.value = "" 
+        textField.value = "" */
+
+        
+
     }
     updateCompletedlist()
     console.log(tasks,":",tasksAndDate)
