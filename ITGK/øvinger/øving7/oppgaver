@@ -2,4 +2,20 @@
 Et intranett er et internt nettverk, der kun folk som er på samme sted som intranettet har tilgang
 
 2. 
-En ruter 
+En ruter sender ut pakker til riktig mottaker på nettverket, mens en vert er en på nettverket som tar i mot/sender ut pakker
+
+3.
+129.241.103.4 er et eksempel på en en IP
+
+4. 
+En IP addresse er en unik numerisk verdi som er tildelt til en enhet på nettverket
+
+5. 
+Forskjellen på IPv4 og IPv6, er at IPv6 kan ha flere verdier enn IPv4. 
+
+6.
+Vi har behov for IPv6 siden fler og fler får internett hvert år
+
+7.
+ISP står for: Internet Service Provider
+
