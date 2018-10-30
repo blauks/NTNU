@@ -1,0 +1,37 @@
+Sets/mengder:
+Hvert element i en mengde er unik
+Mengder er ikke ordnet: kan ikke anta rekkefølgen
+Spesifikke operasjoner:
+    - intersection: Kun elementer representert i begge mengdene 
+    - union: Alle elementer fra begge mengdene 
+
+eksempel:
+A = set([,3,3,12])
+kan også bruke krøllparanteser
+D = {1,2,3,4}
+
+A.add(9) legger til 
+A.update([3,2,1]) legger til flere elementer
+A.remove(2) sletter 2 fra mengden A
+
+bruke in eller not in for å sjekke om mengden inneholder en verdi
+
+C = A.union(B) C blir union av A og B (alle elementene i A og B)
+C = A.intersection(B) C blir snitt av A og B (elementene som finnes i begge mengdene)
+C = A.difference(B) C blir elementene i A som ikke er i B 
+C = A.symmetric_difference(B) motsetningen til intersection, elementene som ikke er i A og begge
+
+A.issubset(B) sjekker om A er delmengden av B (returner true hvis sant)
+A.issuperset(B) sjekker om A er supermengden av begge
+
+dictonaries er et objekt som lagrer en samling data
+    - defineres ved å bruke krøllparanteser
+    - kan bruke hva som helst som nøkkel/indeks (ikke bare tall)
+f.eks.
+A = {} tom dictonary
+A["Jonathan"] = 41255429 #oppretter et element
+print(A["Jonathan"]) vil da være 41255429
+
+Serialisering av objekter:
+    - Serialisering av objekter er prosessen å konvertere et objekt til en strøm av bytes som kan lagres til filesizeformat 
+    - biblioteket pickle som gjør det mulig å lagre og laste dictonary til/fra disk
