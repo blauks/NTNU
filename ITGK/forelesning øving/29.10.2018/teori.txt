@@ -1,0 +1,26 @@
+Nettverk:
+
+TCP:
+    - punkt-til-punkt-kommunikasjon
+    - pålitelig 
+
+latency: Tiden det tar å overføre data over et nettverk fra et endepunkt til et annet
+Throughput: mengden data som kan overføres innenfor en gitt tidsenhet
+Jitter: endringer i forsinkelser og lengden på forsinkelsene
+
+Propagation delay:
+    Tiden det tar for et signal å sendes over et medium
+Accsess delay:
+    Tiden det tar å få aksess til et delt medium
+Switching delay:
+    Tiden det tar å rute en pakke videre
+Queuing delay:
+    Tiden en pakke er i minnet til en switch/ruter mens den venter på å bli videresendt
+Server delay:
+    Tiden det tar for en server å respondere på en forespørsel og sende respons. Det er ofte denne som er problemet
+
+Kapasiteten til et nettverk uttrykkes gjerne som max throughput
+Throughput betegner hvor mye data som kan sendes gjennom et nettverk målt i bits per sekund
+
+Goodput er mengden data selve applikasjonen ...
+
