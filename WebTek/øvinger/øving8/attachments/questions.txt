@@ -1,0 +1,21 @@
+1.
+getContext("webgl);
+
+2.
+ctx.arc(x,y,r,sA,eA,cW);
+x = The circles center x-coordinate 
+y = The circles center y-coordinate
+
+r = radius of the circle
+
+sA = the start angle of the circle (radians)
+sE = the end angle of the circle (also in radians)
+
+cW = if the circle goes clockwise(false) or counterclockwise(true)
+
+3.
+const countries = ['Norway', 'Sweden', 'Denmark', 'New Zealand'];
+const countriesStartingWithN = countries.filter(function(x) {
+       return x.startsWith("N");
+})
+
