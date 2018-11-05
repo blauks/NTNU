@@ -1,0 +1,14 @@
+Algortime-effektivitet:
+    - Måle som antall utførte instruksjoner
+
+Stor Theta kan brukes til å representere klasser av effektivitet 
+
+Sekvensielt søk:
+    Sekvensielle søk er algoritmer som søker igjennom en liste for en bestemt verdi ved å sjekke hvert eneste element i rekkefølge
+
+For å gjøre algoritmen mest mulig effektiv pleier man å stoppe når man har funnet det man leter etter
+
+Innstikksortering:
+    Simpel sorteringsalgoritme som sorterer element for element 
+    Effektiv for korte lister
+    
