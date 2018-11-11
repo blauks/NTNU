@@ -11,4 +11,85 @@ For å gjøre algoritmen mest mulig effektiv pleier man å stoppe når man har f
 Innstikksortering:
     Simpel sorteringsalgoritme som sorterer element for element 
     Effektiv for korte lister
+
+Rekrusjon:
+    En funksjon som kaller på seg selv 
+    Viktig med en stopp verdi slik at funksjonen ikke går i evig tid 
+
+
+Teori nettverk del 4:
+    Sikkerhetsutfordninger:
+        Phishing: opptre som en kjent nettside for å få tak i personlig informasjon
+        Misrepresnentation: oppgi feilaktige opplysninger om et produkt eller tjeneste eller levere produkt tjenester som er falsk eller av dårlig kvalitet 
+        Scams: lure brukere av f.eks. et nettsted eller tjeneste til å investere penger eller noe ulovlig 
+        Denial of service: bevist blokkering av tilgang til et nettsted eller tjeneste
+        Loss of control: uvedkommende tar kontroll over en brukers datamaskin
+        Loss of data: tap av åndsverk eller annen verdifull informasjon
+
+    Sikkerhetsangrep:
+        Wiretapping: kopiere datapakker som traverserer nettet for å få tak i informasjon
+        Replay: sende pakker fanget opp fra tidligere sesjoner
+        Buffer overflow: oversende mer data enn hva mottaker forventer. Overskrider et databuffers grense og skriver til nabolokasjoner
+        i minnet. 
+        Spoofing: bruke falsk ip-kildeapdresse for å lure mottaker til å prosessere pakken. Bruke falske e-postavsendere, misbruke domenenavn osv.
+
+    Sikkerhetsangrep:
+        Denial of service (DoS/DDoS): Orverøse en vert med datapakker for å ta bruke opp alle ressuser. Skaper lange forsinkelser
+        SYN flood: Form for DoS-angrep. Angriperen sender en serie med SYN-forespørsler mot et datasystem for å forhindre annen trafikk
+        Password breaking: automatiserte systemer lager for å "knekke" passord og dekrypteringsnøkler for å få uautorisert aksess til en nettressurs
+        Port scanning: forsøk på å koble til åpne protokollporter på en vert for å finne en svakhet
+        Packet interception: modifisering av pakker på vei fra avsender til mottaker 
+
+    Sikkerhetsrettningslinjer:  
+        Det finnes ingen absolutt definisjon på et sikkert nettverk
+        I praksis må organisasjoner balansere sikkerhet og enkelhet i bruk
+
+        Dataintegritet: er dataene som sendes identiske med de som mottas
+        Datatilgjenlighet: er dataene tilgjenlige for personer som skal ha tilgang?
+        Datakonfidensialitet: Er dataene beskyttet mot uautorisert tilgang?
+        Personvern: i hvilken grad vlir anyonymitet ivaretatt? 
+
+
+    Hashing:
+        Paritetsjekker sørger ikke for dataintegritet
+        Hashing-mekanismer kan lage meldings-autentiseringskoder som ikke kan knekkes eller forfalkes
     
+    Aksesskontroll og passord:
+        Aksesskontroll-mekanismer kontrollerer hvilke brukere eller programmer som kan aksessere hvilke data
+        Tiltak må gjøres for å sikre at passord ikke er for enkle å gjette
+        Ukrypterte passord og ACLs sendes over nettverk kan potensielt bli plukket opp av noen andre 
+
+    Kryptering: 
+        Å kryptere en melding vil si å endre på dataene i en melding, slik at kun riktig mottaker kan rekonstruere den opprinnelige meldingen
+        Kan garantere konfidensialitet, meldingsautentisitet og dataintegritet
+        Vi kan tenke på kryptering som en return-funksjon som tar i mot argumenter og meldingen og returnerer en kryptert variant av meldingen 
+        Krypteringsteknikker kategoriserses etter hvordan de bruker krypteringsnøkler  
+            private key systems
+            public -||-
+        
+    Digitale signaturer:
+        EN kan også bruke en privat nøkkel for å kryptere en melding. Dette kalles å gi en melding en digital signatur 
+        En mottaker kan autentisere avsender ved å bruke avsenders offentlige nøkkel for å dekryptere meldingen 
+        Mottaker vet med sikkerhet hvem som har sendt meldingen siden det kun er avsenders offentlige nøkkel som kan dekryptere meldingen
+    
+    Digitale sertifikater og utsteder:
+        For å forhindre at hvem som helst kan lage private og offentlige nøkler, og dermed opptre som andre, er det behov
+        for en pålitelig tredjepart
+
+    Brannmurer og pakkefiltrering:
+        En brannmur har et pakkefilter som undersøker informasjonen i pakkehodet og avgjør om pakken skal få passere gjennom ruteren eller ikke 
+        Kan brukes for å kontrollere aksess til spesifikke tjenester på spesifikke datamaskiner 
+
+    VPN:
+         Bruker kryptering for å tilby sikker aksess til et lokalt nettverk for klienter som befinner seg utenfor
+         Opprinnelig laget for å koble sammen lokale nettverk til en organisasjon som er fysisk distrubriert i et sikkert virtuelt nettverk
+         
+    Pakkekryptering kontra tunnelering:
+        Det sendes hovedsakelig tre valgmuligheter mht. hvordan pakker som skal sendes over internett kan krypteres: Payload encryption, IP-in-IP tunneling og IP-in-TCP tunneling
+        Payload encryption:
+            Krypterer kun meldingsinnholdet i pakken 
+
+        IP-in-IP:
+            Krypterer både meldingsinnholdet og hodet og plasserer resultatet i en ny pakke, som så kan sendes over internett
+
+        

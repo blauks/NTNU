@@ -1,0 +1,17 @@
+1.
+TCP behandler en tapt pakke ved å først starte en timer når avsenderen sender ut en pakke, og dersom bekreftelsen på at mottaker har
+fått pakken stopper timeren, men om timeren utløper før bekreftelsen sender avsenderen en kopi ut en kopi av pakken
+
+2.
+Latency, throughput og jitter
+
+3. 
+Et DDoS angrep er når man sender flere pakker enn en mottaker kan håndtere fra forskjellige avsendere
+
+4. 
+VPN står for Virtual Private Network
+VPN bruker kryptering til å tilby sikker aksess til et lokalt nettverk som du ikke kan direkte koble deg til
+
+5.
+I RSA-kryptering får hver part en privat og en offentlig nøkkel. En melding kryptert med den offentlige nøkkelen
+kan bare dekrypters med de private nøkklene.
