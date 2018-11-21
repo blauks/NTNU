@@ -1,0 +1,238 @@
+Integrated circuits: prosessoren (mange transistorer) 
+OS allokerer ressuser melog gir brukergrensesnitt til bruker for å bruke programmer 
+Kernel ligger mellom hardware og OS 
+WWW sammenheng av mange små nettverk 
+
+Kilo 10³ 
+Mega 10⁶
+Giga 10⁹ 
+Tera 10¹²
+Peta 10^15
+Exa 10^18
+
+Datatype: er en måte å lagre informasjon på en datamaskin
+Bit 0 eller 1
+Byte - 8 bits
+int char(ascii) float array string 
+Ascii: først store bokstaver deretter små bokstaver senere
+float: ikke nøyaktig, f.eks. x opphøyd i y ganget med a opphøyd i b 
+Objekter: Kan holde mange forskjellige datatyper, egendefinerte
+
+Octal, Hexadecimal og Binær:
+Titallssystemet 
+Hexadecimal bruker opp til 15, 10 = A, 11 = B, 12 = C osv
+
+Binær -> octal, se på 3 og 3 tall også sette de sammen for å få tallet 
+Binær -> hexa, se på 4 og 4 tall også sette de sammen 
+
+Mer om binær: 
+1 foran = negativt tall
+0 foran = positivt tall
+Orginalt ^
+Istedenfor 
+Bruker siste tallet til å definere om tallet er positivt eller negativt
+Om man ikke bruker 2er complement, da kan man bruke alle de positive tallene som bitsene gjør det mulig å få.
+Om man bruker det får man halvparten men da får man også de negative tallene 
+
+Datamaskinen: 
+Sammensetning av mange deler
+
+Hoverkort: 
+Kobler sammen alle delene i datamskinen 
+
+CPU: 
+Viktigste delen av datamaskinen 
+Består av tre deler:
+    1. Kontroll - hva CPUen skal gjøre, hva den neste instruksjonen er, hva den skal hente fra minnet
+    2. Minne - minne
+    3. ALU - legge sammen tall, matte
+Kjører veldig raskt 
+5 steg:
+    IF - instruction fetch - fetch the instruction stored at the specified location
+    ID - instruction decode - decode the instruction and the relevant adresses 
+    DF - Data fetch - fetch the data at the specified addresses
+    EX - execution - perform the instruction on the data
+    RR - results return - store the result in the memory
+
+Minne: 
+    RAM, HDD, SDD, CD, DVD, Ekstern harddisk 
+
+
+Analogt vs Digitalt:
+    Alt er egt analogt 
+    På en PC er alt 1ere eller 0ere
+    vi må "lure" ting inn på pcen
+    ADC og DAC
+
+Piksler:
+    Representere bilder
+    Hver piksel består av tre farger
+    Hvor mange pikser * hvor mange verdier som kan være i pikslene 
+
+RGB:
+    Hver er mellom 0-255
+    Representeres som seks Hexadecimale tall 
+    2 tall til hver farge
+    FF = 255
+    Representerer alle fargene på skjermen din (vanligvis)
+
+Lyd:
+    Sampling:
+        Bør være dobbelt så ofte som frekvensen
+        Frekvensen på opptaket skal være dobbelt så høy som frekvensen på det orginale klippet
+        44100 Hz er standard 
+    Bitdybde :
+        Hvor nøyaktig man gjengir lyden 
+        16 bit er standard
+    20 minutter med lyd:
+        20*60(hvor lenge i sek) * 44100(hvor sto samplingsfrekvens) * 16(bitdybde) * 2(stereo)  = 202 MB
+
+Encoding and compression:
+    Hvordan lagre data på en datamskin
+    Mange 0ere og 1ere  
+    lossless (komprimerer uten å miste noe info, begrenset) vs lossy(mister nie informasjon, du kan ikke få tilbake det orginale dataobjektet)
+    Legger ikke merke til informasjonen som blir mistet i lossy
+
+Algoritmer 1.
+    Nøyaktiv beskrivelse av hvordan man løser et problem 
+    Stegvis 
+    Python er nesten psuedokode
+
+Algoritmer 2.
+    Eks. 
+        Sammenligning(a,b)
+            Hvis a er større en b 
+                returner a 
+            ellers
+                returner b 
+
+Internettet:
+    Historikk:
+        ARPANET - department of defence 
+
+    Layers of the internet:
+        Fysisk: nettverkskabel eller trådløs adaptder 
+        Link: Driverne som gjør at nettverkskabelen eller det trådløse adapteret faktisk funker
+        Internett: du får en "addresse". Andre kan finne deg ved å gå nærmere og nærmere. Pakker kan bli adressert 
+        Transport: Du kvitterer for alle pakkene du får, de som forsvinner blir sendt på nytt
+        Applikasjon: Facebook/YT/Netflix osv.
+
+        MEN: ikke spill, kommunikasjon eller lignende 
+
+IPv4 vs IPv6:
+    Vi har for mange enheter på internettet 
+    Trenger flere addresser 
+    IPv6 er den nye internett protokollen 
+    IPv4 32 bits, IPv6 128 bit
+
+IP-addresse:
+    ISP har fått et IP-området
+    Ruter har fått et mindre IP-områdetRuter gir deg en IP-addresse
+    NAT: bruker port nummer til å ha i addresse
+
+DNS - Domain Name System
+    Address-bok for IPer
+    Oversetter tekst addresser til IP-addresser
+    www.nrk.no -> 95.101.172.64
+
+Overføring: 
+    Packet Switching og Circuit Switching
+    Circuit Switching kaster bort båndbredde
+
+Handshake:
+    Three-way handshake:
+        You: Connection?
+        Server: OK. Connection?
+        You: OK
+    Om server ser at alle pakkene ikke har kommet fram spør om de, dette er viktig mtp video streaming osv. 
+
+Trender:
+    Sikkerhet blir vanskligere og vanskligere 
+
+Reliability 1:
+    Packet checking
+
+    Checksum:
+        Single bit error
+            Burst error
+            Erasure 
+        2-dimension checksum
+            Better
+            Erasure still a problem 
+
+Reliability 2:
+    Error detection vs. Overhead 
+    Cyclic, Redundancy Check 
+    Checksums 
+    Resending is common -> it's cheap! 
+
+Protokoller:
+    IP - internett protokoll
+    TCP - Transmission Control Protocol
+    UDP - User Diagram Protocol 
+    HTTP - Hyper-text transfer protocol 
+    HTTPS - Hyper-text transfer protocol secure
+
+Sikkerhet:
+    Enkrypsjon
+    Keys
+    VPN
+    Handshake
+    Phishing
+    Scams
+    Denial of Service
+    Loss of Control
+    Loss of Data
+    Wiretapping
+    Spoofing
+    Brute Force
+    Packet interception
+
+Enkrypsjon og personvern:
+    Enkryptering 
+    Nøkler og hemmelige meldinger
+    HTTP vs. HTTPS
+        HTTP - ingen meldinger du sender er ikke krypterte 
+    Overvåking av data 
+
+VPN - Virtual Private Network
+    DU sender all data til et sted 
+    Den gjør så det du ber den om 
+    All din data går bare i en retning 
+    Din data kan være skjult selv fra din ISP
+    Ikke trygt hvis VPN ikke trygt
+
+Overvåking:
+    Uten enkrypsjon - alt kan leses
+    
+Phishing og Pharming:
+    Phishing:
+        Nigeriansk prins 
+    Pharming:
+        Falske downloads 
+        Falske innlogginssider
+
+Internet of things og andre buzzwords:
+    Internet of things: en ting som er koblet til internettet 
+
+Andre ting:
+    Silisium:   
+        Halv-leder 
+        Bruker strøm til å kontrollere strøm
+
+    Printere: 
+        Bruker en annen fargemodell
+        Cyan, Magenta, Yellow and key(Black)
+        Funker ved å sende interupts til pcen  
+            Ber om omerksomhet fra pcen
+    
+    Fordeler ved digital systemer:
+        Lettere å oppdatere 
+        Kan gjøre mer med de
+        Er tilgjengelig utenfor området 
+
+    Svakheter:
+        Koster penger
+        Krever vedlikehold
+        Krever trening 
+        
