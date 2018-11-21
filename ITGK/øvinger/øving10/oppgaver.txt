@@ -1,0 +1,16 @@
+1. 
+En algoritme er en beskrivelse av en serie opperasjoner som skal løse et problem 
+
+2. 
+At en algoritme har en kjøretid på O(n²) betyr at for hvert steg den tar (n) blir den mindre og mindre effektiv. 
+Eksempler på algoritmer med O(n²) er sekvensielt søk og bubble sort
+
+3.
+O(n log n)
+O(n²)
+O(n³)
+O(2^n)
+
+
+4.
+En reksursiv funksjon er en funksjon som kaller på seg selv, mens en iterativ funksjon gjør ikke det 
