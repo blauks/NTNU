@@ -6,13 +6,12 @@ def binarySearch(num,el):
         if num[m] == el:
             return m 
         elif num[m] < el:
-            i = binarySearch(num[m:],el)
-            m += i
+            #return m + binarySearch(num[m:],el)
+            m += binarySearch(num[m:],el)
         elif num[m] > el:
             m = binarySearch(num[:m],el)   
         else:
             m = -float('inf')    
-
 
     return m
     
@@ -20,4 +19,4 @@ def binarySearch(num,el):
     
     
 
-print(binarySearch([1,4,6,9,13,34,45,53,65,78],4))
+print(binarySearch([1,4,6,9,13,34,45,53,65,78],65))

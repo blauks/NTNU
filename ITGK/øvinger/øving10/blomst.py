@@ -23,14 +23,14 @@ def flower(num, i=1):
         begin_fill()
  
     petal()
-    left(60)
+    left(360/num)
 
+    if num != i:
+        flower(num, i+1)
 
     if i==1:
         end_fill()
 
-    if num > 0:
-        flower(num - 1)
  
 flower(12)
 time.sleep(10)
