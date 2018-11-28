@@ -28,3 +28,4 @@ liste = [5,3,7,1,4,6,9]
 
 findSmallestElement(liste)
 
+print(liste)
