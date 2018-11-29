@@ -1,0 +1,626 @@
+def førsteUke(Hardware){
+Mindre kretskort på et hoverkretskort kalles datterkort 
+Primærminne:
+    Stedet hvor programmer og data lagres mens programmet kjører
+    Slettes når maskinen skrus av
+    RAM: Random accsess memory
+    Flyktig (ikke permanent)
+    Alle elementer fra RAMen kan hentes direkte (altså ikke sekventsiell, som LP/kassetter/spolebånd)
+Sekundærminne: Hardddisk 
+    Høy-kapasitet 
+    Lagrer programmer og data som ikke øyeblikkelig er i bruk av datamaskinen 
+    Informasjonen beholdes uansett om datamaskinen er av eller på
+    Kalles permanent eller persistent minne 
+        Ikke volatilt (ikke flyktig, ikke temporært)
+    Liten stabel med blanke metallskiver med en arm som sveiper over/mellom skivene 
+
+    2014 ssd:
+    Laget av flash memory
+    Ingen bevegelige deler, dvs. rask
+    Som en stor "permanent" RAM
+    Slites akkurat som magentiske disker 
+
+    Hardddisker er direkte aksess 
+    
+    Disker feiler
+
+Lagring fra RAM til Hardddisk:
+    Lagring(saving) flytter infomasjon fra RAM til harddisken(e)
+        Moderne OS gjør vanligvis automatiske mellomlagringer
+    RAM-minnet er volatilt
+        Informasjonen forsvinner når du skrur av PCen
+
+IC - integrated circuit 
+    Veldig små, milliarder av transistorer 
+    Flere lag oppå hverandre
+    "Fotograferer" de kretsene man ønsker, og etse bort tomrommene i mellom "ledningene" 
+
+Halvleder:
+    Silisium:
+        Kan velge når man den skal lede strøm eller ikke
+
+Transistor: En kobling mellom to ledninger som kan styres til å la elektriske ladninger flyte, eller ikke, mellom to kabler
+    En bryter uten beveglige deler
+}
+
+def andreUke(Hardware){
+
+Datamaskinen består av fem grunnleggende deler/subsystemer:
+    Minne - RAM, lagrer programmet som kjører og dataene som programmet behandler
+        1-bytes minnelokasjoner kan lagre ett ASCII-tegn eller ett nummer <255  
+    
+    Kontrollenhet 
+        Styrer Fetch/Execute-cycelen 
+        Maskinvare-implementasjon av Hente/Utføre-kretsen 
+
+    Aritmetisk/logisk enhet (ALU)
+        Utfører regneoperasjoner
+        Gjør jobben i Instruction Execute steget
+        Data Fetch henter de verdiene ALUen trenger for å gjøre det den skal (? #formuleringsGeni)
+        Når ALUen er ferdig sørger Result Return steget for å flytte svaret til der den skal
+
+    Input-enhet (Tastatur, mus osv.)
+    Output-enhet (Skjerm høyttaler osv.) En driver for hver output-enhet
+        De kablene og kretsene om infomasjon flyttes inn og ut av datamaskinen gjennom 
+
+Disse delsystemene er bundet sammen av busser
+
+Fetch/Execute cycle:
+    Instruction Fetch
+    Instruction Decode
+    Data Fetch
+    Instruction Execute
+    Result Return
+
+Programtelleren:
+    Addressen til den neste instruksjonen lagres i kontrolldelen av datamaskinen (elr programtelleren).
+
+Hvor rask en datamaskin er regnes ut i GHz
+Antall milliarder sykluser per sekund 
+
+kilo(ett eller annet med datamaskin) = 1024¹ = 2¹⁰
+Mega = 1024² = 2²⁰
+Giga = 1024³ = 2³⁰ 
+osv osv.
+
+Software:
+    Assemblerspråk:
+        En alternativ form for maskinspråk som bruker normale bokstaver og tall, slik at mennesker kan forstå det
+        Maskinen leser assemblerkoden og oversetter til 4-bytes binær, slik at den kan forstå
+
+OS: 
+    Grunnleggende operasjoner som er nødvendig for å kunne bruke maskinen effektivt, men som ikke er bygd inn i maskinvaren
+    OS-et tar seg av booting, minnehåndtering, enhetshåndtering, Internettforbindelse, filhåndtering 
+
+
+}
+
+def tredjeUke(digitalRepresentasjonDel1){
+
+Bit enten 1 eller 0
+Byte = 8 bits
+
+Metadata er data om data
+
+Heksadesimal:
+    Base 16 
+    0->9 
+    a = 10
+    b = 11
+    c = 12
+    d = 13
+    e = 14 
+    f = 15
+
+I bits
+010010 = 2¹ + 2⁴ = 2 + 16 = 18
+18 i Hex = 12 
+
+For å oversette hex til bits kan man ta hvert symbol i hexa også dele opp i fire deler, hvor man oversetter hver del til bit f.eks.
+A    8    4    B
+1010 0100 0010 1011 
+
+Fast størrelse i antall byte 
+}
+
+def fjerdeUke(digitalRepresentasjonDel2){
+
+Signed integer: kan representere både positive og negative tall
+Unsigned integer: kan bare representere positive tall 
+
+Negative tall med binær:
+    Første forsøk:
+        Bruke den siste biten til å definere om tallet er negativt eller ikke
+        Ulemper med dette er at man får +0 og -0 10000 og 00000
+
+    Andre forsøk:
+        La de 256 tilstandene til en byte tilsvare et utvalg av positive og negative tall 
+        Altså toer-komplement:
+            Tallene fra 128->255 unsigned brukes til å representere -128 til -1 signed
+Lyd: 
+    Sampling er å ta målinger av den analoge lyden 
+    Samplingsfrekvens er antall samplinger per sekund
+    Jo høyere samplingsfrekvens desto bedre kvalitet på den digital lyden
+    Vi kan kun få omtrentlige målinger av lyd 
+    Man måler lyden i bits
+    Om man bruker en ekstra bit vil lydsampelet bli dobbelt så nøyaktig 
+    Digital CD lyd representeres av 16bit, altså 65536 forskjellige lydnivåer 
+    Dersom vi øker sample-rate, og antall lydnivåer, så når vi et punkt der det ikke forbedrer lydkvaliteten 
+
+Nyquist:
+    Hvis samplingen er for treg kan lydbølger plasseres mellom samplingene og vi vil miste viktige segmenter av lyden
+    Nyquist-regelen sier at samplingsfrekvensen skal være dobbel så rask som den raskeste frekvensen 
+    CD-standard for samplingsfrekvensen er på 44100Hz 
+
+}
+
+def femteUke(digitalRepresentasjonDel3){
+
+Digital flyttall:
+    45,67 = 4*10¹ + 5*10⁰ + 6*10⁻¹ + 7*10⁻² 
+    Flyttall kan ikke være helt nøyaktige 
+    Gjør at datamaskinen ikke trenger å lagre hele den nøyaktige verdien til tallet, og tar mindre plass 
+
+Hva blir 5,87825 digitalt:
+    1. 5,87825 er mellom 4 og 8
+     -> 1xx,xxxx -> 1,87825 
+    2. 1,87825 er mellom 1 og 2
+        -> 101,xxxx -> 0,87825
+    3. 0,87825 er mellom 1/2 og 1 
+        -> 101,1xxx -> 0,37825
+    4. 0,37825 er mellom 1/4 og 1/2 
+        -> 101,11 -> 0,12825 
+    5. osv. 
+
+
+Digitale bilder og video:
+    Fargedybde: 
+        Antall fargealternativer for hver piksel:
+            1 bit: 2 alternativ 
+            8 bit/1 byte: 256 alternativ
+            24 bit: 16,7 millioner alternativ 
+    
+    Filstørrelse = Bredde(piksel)*Høyde(Piksel)*Fargedybde(antall bytes per piksel)
+
+    Komprimering: 
+        Tapsløs/tapskoding:
+            Tapsløs, lossloss: halvering - tredeling, den originale representasjonen av 0ere og 1ere kan bli rekonstruert perfekt
+            Tapskoding, lossy: Større effekt, avhengig av tap, originale representasjonen kan ikke rekonstrueres eksakt 
+    
+    JPG, PNG, osv osv. 
+
+GIF: 
+    8 bits fargekanal 
+    Alfakanal for transparens 
+    Tapsløs komprimering 
+    Bra for "data grafikk"
+
+JPEG:
+    24 bits
+    Komprimering med tap
+    Bra for fotografier 
+
+}
+
+def sjetteUke(nettverkDel1){
+
+Linjesvitsjing:
+    Fysiske kabler måtte sammenkobles for at to parter skulle kunne kommunisere.
+    Dedikerte linjer
+    Pakkene måtte komme fram i rekkefølge
+
+Pakkesvitsjing:
+    Pakkene blir sendt til forskjellige noder hvor de alle kommer fram til samme mottaker
+    Pakkene trengte ikke å være i samme rekkefølge, de blir satt sammen igjen når de har kommet til mottakeren 
+
+Offentlig nettverk: 
+    Nettjeneste som er tilgjenglig for abbonenter.
+
+Private nettverk:
+    Kontrolleres av en bestemt gruppe. Bruk av nettverket er begrenset til denne. 
+    Consumer
+    Small/home office
+    Small to medium business 
+    Large enterprise 
+
+Protokoller: 
+    Hvordan kommunikasjon skal foregå er spesifisert i en protokoll 
+    En protokoll beskriver prosedyrer for 
+        - feilhåndtering 
+        - Uventede hendelser (f.eks. ingen respons fra mottaker)
+    
+    En protokoll bær kunne håndtere deler av kommunikasjon som ikke håndteres av andre protokoller 
+    Protokoller i en familie er orgainsert i lag 
+    Den lag-baserte modellen (layering model) gjør det lettere å håndtere kompleksiteten i nettverkskommunikasjon 
+    TCP/IP protokollen:
+        Applikasjon:
+            Snapchat, YouTube, netflix, WWW
+        Transport: 
+            TCP: ntnu.no, google.no
+        Internett:
+            IP: xxx.xx.xxx.xxx
+        Nettverksgrensesnitt:
+            MAC AB: xx:xx:xx: osv. 
+        Fysiske lag: 
+            Spenning i kobber,radiofrekvens, i luft, lys i rør 
+        
+    Output fra en protokoll i et lag er input til en protokoll i neste lag
+    Hvert lag i en protokoll-stack bidrar til at en melding kommer fram som forventet (til slutt)
+    
+OSI-referansemodellen:
+    Open Systems Interconnection er en ISO-standard for lagdeling av kommunikasjonsprotokoller
+    Har to lag i tillegg til de vi finner i TCP/IP.
+        Presentasjon 
+        Sesjon
+
+Feilkilder i overføring av data:
+    Feildetekterings-mekanismer er ressurskrevende 
+    Interference(Forstyrrelse)
+        Elektromagentisk stråling kan forstyrre radiosignaler 
+    Distortion(forvrengning)
+        Signaler kan forvrenges, f.eks. av metallobjekter 
+    Attenuation(svekking):
+        Signaler svekkes over når de sendes over et medium 
+    
+Effekt av feil i overføring av data:
+    Single bit error
+        En enkelt bit er blitt endret
+    Burst error
+        Flere bits i en blokk endres
+    Erasure
+        Signalet som kommer frem hos mottaker er tvetydig (hverken logisk 1 eller 0) pga. f.eks. forvrengning
+
+Strategier for håndtering av feil
+    Forward Error Correction (FEC)
+        Legger til tilleggsinformasjon som lar mottaker verifisere at korrekt data har blitt mottat 
+    Automatic Repeat reQuest (ARQ)
+        Forutsetter samarbeid med avsender. Avsender og mottaker utveksler informasjon for å sikre at data blir overført korrekt.
+        TCP bruker en variant av ARQ for å sikre at pakker kommer frem via IP, fordi IP i seg selv ikke har noen mekanisme 
+        for å sjekke pakketap 
+    
+FEC-korrigeringsteknikker
+    Block Error Codes:
+        Dataene deles inn i blokker, med ekstra infomasjon (redundancy) knyttet til hver blokk
+    Convolutional Error Codes:
+        Det som sendes tolkes som en strøm av data, og korrigeringsteknikken blir beregnet tilvsvarende kontinuerlig. 
+        Resultatet av det du beregner avhenger nå av det som er gjort før.
+
+    Partallsparitet: Paritetsbit settes til 0 dersom blokken har et likt antall 1-bits og 0 dersom blokken har oddetall
+    Oddetallsparitet er motsatt
+
+Single bit parity checking
+    SPC sjekker om en av de ni overførte bitsene har endret seg for å avgjøre om mottat byte er korrekt 
+
+Row and Column (RAC) parity
+    RAC kan avdekke og korrigere singel bit feil
+    Mottaker organiserer mottat data som en tabell, med paritetsbit for hver rad og kolonne
+    Bit-feil i to paritetssjekker, som igjen identifiserer hvor i tabellen feilen ligger 
+
+Internett bruker 16-bits sjekksum:
+    Deler opp dataen i 16-bits enheter. Legger til 0-er til slutt for å fylle opp siste enhet ved behov
+
+}
+
+def syvendeUke(nettverkDel2){
+
+Linjesvitsjing/circuitswitching
+    Oppretter en dedikert kommunikasjonskanal mellom sender og mottaker 
+    Brukt i analoge telefonssystemer
+    Permanente kanaler 
+
+Pakkesvitsjing
+    Kommunikasjonskanalene er delt opp i ulike parter
+    Egenskaper:
+        Sender kan kommunisere med 1..N mottakere samtidig. Mottaker kan motta meldinger fra 1..N sendere samtidig 
+        Asynkron kommunikasjon, kommunikasjon mellom sender og mottaker kan skje når som helst. Forsinkelser håndteres.
+        Ingen krav til å sette opp kommunikasjonslinje. 
+        Nettverksytelse avhenger av hvor mange sendere som prøvde å sende pakker samtidig. Kapasiteten fordeles ikke etter et fast
+        mønster, men etter behov. 
+
+Pakkesvitsjede nettverk karakteriseres etter området de dekker:
+    LAN (Local Area Network) - dekker typisk et rom eller bygning 
+    MAN (Metropolitan Area Network) - dekker typisk en storby
+    WAN (Wide Area Network) - dekker typisk flere byer 
+
+    Desto større dekningsområde desto høyere kostnad 
+
+Forskjellige LAN-topologier
+    Bus 
+        Alle datamaskiner er koplet til et felles medium (kabel)
+        Kun en datamaskin kan sende ut informasjon om gangen 
+    Ring 
+        Lukket sløyfe, Pakken sendes gjennom ringen til den når riktig mottaker 
+        Enklere å koordinere aksess og detektere nettverksproblemer 
+        Sårbart dersom man mister en forbindelse 
+    Star 
+        Datamaskinene er koblet sammen i et sentralt punkt
+        Huben tar i mot data fra sender og ruter den videre til riktig mottaker
+        Pålitelig, Om en node stopper å funke påvirker ikke dette resten av nettverket
+    Mesh 
+        Direkte kopling mellom hver datamaskin på nettverket 
+        Høy kostnad, Antall forbindelser i et nettverk med n datamaskiner: (n²-n)/2
+        Pålitelig
+    
+Addresering i LAN 
+    Hver datamaskin i et pakkesvitsjet LAN har en unik adresse: Media Access Control (MAC) 
+        Kalles også fysisk addresse 
+    Hver pakke inneholder MAC-addressen til en avsender-node og mottaker-node
+    Lag 2 i TCP/IP-stacken legger MAC-addresseinformasjon på pakken 
+
+Hva MAC-addressen inneholder
+    Består av 48-bits delt inn i to 3 bytes blokker 
+        Den første blokken (OUI) spesifiserer utstyrsleverandøren, som får disse tildelt av IEEE 
+        Den andre blokken (NIC) spesifiserer en unik verdi utstyrsleverandøren gir den spesifikke maskinvaren 
+    Bit nr. 7 i den først blokken spesifiserer om OUI er globalt unik eller lokalt tilordnet 
+    Bit nr. 8 i den første blokken spesifiserer henholdsvis om addressen er unicast eller multicast 
+
+Unicast, Broadcast, Multicast 
+    Tre typer adressering som korresponderer til tre typer pakkelevering:
+        Unicast: Identifiserer en enkelt datamaskin i nettverket. Bare denne skal motta pakken. 
+        Broadcast: Adresserer alle datamaskinene på nettverket. Alla mottar kopi av addressen. 
+        Multicast: Identifiserer et subsett av datamaskiner i nettverket. Alle i subsettet mottar kopi av pakken.
+    
+    Broadcast kan betraktes som en form for multicast, dvs. et sett som inneholder alle datamaskinene på nettverket
+
+
+Konseptet Universelle Tjenester 
+    Ulike nettverksteknologier dekker ulike behov 
+    Universal serivce: Tillat kommunikasjon mellom datamaskiner uavhengig av typen nettverk de sitter på
+    Internett er en sammenkopling av ulike fysiske nettverk.
+    Universal Service er et grunnleggende premiss for at internett fungerer.
+
+Rutere
+    Maskinvare med prossessor, minne og I/O grensesnitt som brukes til å koble sammen heterogene nettverk 
+    Kan koble sammen ulike typer nettverk (f.eks. to LANS, et LAN og et WAN eller to WANs) og ulike nettverksteknologier 
+    Bruker protokoller for å støtte kommunikasjons mellom ulike typer nettverk 
+
+Internett-arkitektur
+    En ruter kan koble sammen flere nettverk
+    Det er ulemper ved å bare ha en ruter til å knytte sammen flere nettverk 
+
+Virituelle nettverk 
+    Internett er et eksempel på et virituelt nettverk 
+    Illusjonen muligjørs av TCP/IP
+
+TCP/IP
+    Brukes av verter og rutere 
+    Lag 3 spesifiserer (IP)
+        formatet på pakkene 
+    Lag 4 (TCP) sørger for pålitelig overføring av data 
+
+IP-addressering 
+    Sørger for at man kan sende data til alle maskiner på internett 
+        Sender merker pakken med IP-addressen til mottaker (i tillegg til egen)
+        IP protokoll-programvare sørger for at pakken når frem 
+    IPv4 består av 32 bits og har et prefiks og et suffiks som tilsammen gir en unik addresse 
+    Prefikset spesifiserer det unike fysiske nettverket en datamaskin er tilknyttet 
+    Suffikset spesifiserer en spesifikk datamaskin på nettverket 
+    
+IPv4 ble delt i tre primæreklasser med ulike størrelser på prefiks og suffiks
+    De fire første bitsene i en addresse spesifiserer klassen 
+
+IPv4 dotted decimal notation
+    Gjør det lettere å lese IPv4 addresser 
+    hver 8-bits seksjon av addressen uttrykkes som et desimaltall og separeres med punktum 
+
+Subnetting og klasseløs addressering 
+    Classfull ip adressing utnyttet ikke addresseplassen godt nok
+    Subnetting og klasseløs inndeling ble lagd for å overkomme begrensingene mht IPv4s klasseinndeling 
+        Tillatter vilkårlig deling mellom prefiks og suffiks 
+        En tjenestetilbyder på internett kan dele ut suffiks med passelig størrelse 
+
+Subnett-masker 
+    Deler en IP-addresse inn i nettverks- og host-addressen. Verter og rutere må lagre subnett-masken 
+    En subnettmaske er en 32-bits verdi hvor 
+        1 spesifiserer hvilke bits av en IP-addresse som utgjør prefiks
+        0 spesifiserer hvilke bits av IP-addressen som utgjør suffiksen 
+
+Fra IPv4 til IPv6 
+    IPv6 benytter et tre-nivås hierarki med mht til addresser 
+        Globalt unik prefiks. Størrelse på IPv6 prefiks kan variere 
+        Subnet. Størrelse på subnet og prefiks er 64 bit 
+        Vert. Fast størrelse på 64 bit 
+    Har ikke en spesiell addresse for multicast 
+    Hver IPv6 adresse har en av tre basistyper 
+        Unicast: korresponderer til en bestemt datamaskin. Pakker som sendes til adressen rutes langs den korteste vei
+        Multicast: korresponderer til et sett datamaskiner. En kopi av hver pakke sendes til alle i settet. Settet kan endres 
+        Anycast: korresponderer til et sett datamaskiner med felles prefiks. Pakker sendes til en av disse datamaskinene 
+
+IPv6 forenkles ved å gjøre om hver gruppe av 16 bits til hexadecimale verdier med ":" som skilletegn 
+
+}
+
+def åttendeUke(nettverkDel3) {
+
+TCP tilbyr 
+    Connection orientation 
+        Først etablere forbindelsen, deretter bruke den til å sende data 
+    Punkt-til-punkt-kommunikasjon
+    Pålitelighet 
+    Full dupleks kommunikasjon
+        Tillater at data sendes begge veier, når som helst 
+    Stream interface 
+        Mulighet for å sende en kontinuerlig strøm med tegn 
+    Pålitelig opprettelse av forbindelse 
+    Avslutning av forbindelse 
+    Ende til ende kommunikasjon 
+        Bruker IP til å sende meldinger 
+        Applikasjonslaget kan sende data som en kontinuerlig strøm 
+        Hvert endepunkt trenger TCP-programvare 
+    
+Håndtering av duplikater og pakker i feil rekkefølge (sequencing)
+    Avsender merker hver pakke med et sekvensnummer 
+    Mottaker lagrer sekvensnummer på siste mottat pakke i tillegg til en liste med andre pakker som kom i feil rekkefølge 
+
+Håndtering av pakketap 
+    Når en pakke ankommer inntakt sender mottaker en bekreftelse (ACK)
+    Hver gang avsender sender en pakke starter en timer 
+    Dersom bekreftelse fra mottaker ankommer før timeren utløper kanselleres timeren 
+    Dersom timeren utløper før ACK sendes en ny pakke og en ny timer startes 
+    Retransmisjoner kan føre til duplikater 
+    Begrensinger på antall retransmisjoner 
+
+Håndtering av forsinkeler (replay errors)
+    Håndteres gjennom å merke pakker i en sesjon med en unik ID (f.eks. sesjonens starttidspunkt)
+        Protokoll-software avviser pakker med feil ID 
+
+Flytkontroll
+    Teknikker som forhindrer at en rask avsender overkjører en sen mottaker. 
+        Stop-and-go 
+            Sender venter på bekreftelse fra mottaker om mottat pakke før ny pakke sendes 
+            Lite effektivt 
+        Sliding window
+            Variasjon av stop-and-go med bestemt buffer
+
+Mål for nettverksytelse 
+    Latency
+        Tiden det tar å overføre data over et nettverk fra et endepunkt til et annet 
+    Throughput 
+        Mengden data som kan overføres innenfor en gitt tidsenhet 
+    Jitter 
+        Endringer i forsinkelser og lengden på forsinkelsene 
+
+Ulike typer latency 
+    Propegation delay
+        tiden det tar for et signal å sendes over et medium 
+    Access delay
+        Tiden det tar å få aksess til et delt medium 
+    Switching delay 
+        Tiden det tar rute en pakke videre 
+    Queuing delay   
+        Tiden en pakke er i minnet til en switch/ruter mens den venter på å bli videresendt 
+    Server delay   
+        Tiden det tar for en server å respondere på en forespørsel og sende respons. Det er ofte denne som er problemet 
+
+    "Goodput" er mengden data en applikasjon kan sende 
+
+Quality of Service (QoS)
+    Noen vil betale sin ISP mer for å få garantier om hastighet og båndbredde 
+        Service Level Agreement (SLA) sier noe om "vanlig" og garantert overføringshastighet 
+        Commited Information Rate (CIR) kan ofte være 0 selv om vanlig hastighet er 155Mbps 
+        Brukeren som akseptere CIR = 0 må være forbredt på ubestemt nede-tid ved hendelser som at kabelen ryker, osv.
+
+
+}
+
+def niendeUke(nettverkDel4){
+
+Sikkerhetsutfordninger
+        Phishing
+            Opptre som en kjent nettside for å få tak i personlig informasjon
+       
+        Misrepresnentation 
+            Oppgi feilaktige opplysninger om et produkt eller tjeneste eller levere produkt tjenester som er falsk eller av dårlig kvalitet 
+       
+        Scams 
+            Lure brukere av f.eks. et nettsted eller tjeneste til å investere penger eller noe ulovlig 
+       
+        Denial of service 
+            Bevist blokkering av tilgang til et nettsted eller tjeneste
+       
+        Loss of control 
+            Uvedkommende tar kontroll over en brukers datamaskin
+       
+        Loss of data 
+            Tap av åndsverk eller annen verdifull informasjon
+
+Sikkerhetsangrep
+        Wiretapping 
+            Kopiere datapakker som traverserer nettet for å få tak i informasjon
+        
+        Replay 
+            Sende pakker fanget opp fra tidligere sesjoner
+        
+        Buffer overflow 
+            Oversende mer data enn hva mottaker forventer. Overskrider et databuffers grense og skriver til nabolokasjoner
+            i minnet. 
+        
+        Spoofing 
+            Bruke falsk ip-kildeapdresse for å lure mottaker til å prosessere pakken. Bruke falske e-postavsendere, 
+            misbruke domenenavn osv.
+
+        Denial of service (DoS/DDoS) 
+            Orverøse en vert med datapakker for å ta bruke opp alle ressuser. Skaper lange forsinkelser
+        
+        SYN flood 
+            Form for DoS-angrep. Angriperen sender en serie med SYN-forespørsler mot et datasystem for å forhindre 
+            annen trafikk
+        
+        Password breaking 
+            Automatiserte systemer lager for å "knekke" passord og 
+            dekrypteringsnøkler for å få uautorisert aksess til en nettressurs
+        
+        Port scanning 
+            Forsøk på å koble til åpne protokollporter på en vert for å finne en svakhet
+        
+        Packet interception 
+            Modifisering av pakker på vei fra avsender til mottaker 
+
+Sikkerhetsrettningslinjer 
+    En organisasjons nettverkssikkerhets-policy beskriver hva som bør beskyttes 
+    Typiske sikkerhetsaspekter
+        Dataintegritet
+            Er dataene som sendes identiske med de som mottas 
+        Datatilgjenlighet 
+            Er dataene tilgjenglige for personer som ikke skal ha tilgang
+        Datakonfidensialitet 
+            Er dataene beskyttet mot uautorisert tilgang
+        Personvern
+            I hvilken grad blir anonymitet ivaretatt? Avsløres senderens identitet?
+    
+Sikkerhetsteknologier
+
+    Hashing:
+        Paritetsjekker sørger ikke for dataintegritet
+        Hashing-mekanismer kan lage meldings-autentiseringskoder som ikke kan knekkes eller forfalkes
+    
+    Aksesskontroll og passord:
+        Aksesskontroll-mekanismer kontrollerer hvilke brukere eller programmer som kan aksessere hvilke data
+        Tiltak må gjøres for å sikre at passord ikke er for enkle å gjette
+        Ukrypterte passord og ACLs sendes over nettverk kan potensielt bli plukket opp av noen andre 
+
+    Kryptering: 
+        Å kryptere en melding vil si å endre på dataene i en melding, slik at kun riktig mottaker kan rekonstruere
+        den opprinnelige meldingen
+        Kan garantere konfidensialitet, meldingsautentisitet og dataintegritet
+        Vi kan tenke på kryptering som en return-funksjon som tar i mot argumenter og meldingen
+        og returnerer en kryptert variant av meldingen 
+        Krypteringsteknikker kategoriserses etter hvordan de bruker krypteringsnøkler  
+            private key systems
+            public -||-
+        
+    Digitale signaturer:
+        EN kan også bruke en privat nøkkel for å kryptere en melding. Dette kalles å gi en melding en digital signatur 
+        En mottaker kan autentisere avsender ved å bruke avsenders offentlige nøkkel for å dekryptere meldingen 
+        Mottaker vet med sikkerhet hvem som har sendt meldingen siden det kun er avsenders offentlige nøkkel som kan 
+        dekryptere meldingen
+    
+    Digitale sertifikater og utsteder:
+        For å forhindre at hvem som helst kan lage private og offentlige nøkler, og dermed opptre som andre, er 
+        det behov for en pålitelig tredjepart
+
+    Brannmurer og pakkefiltrering:
+        En brannmur har et pakkefilter som undersøker informasjonen i pakkehodet og avgjør om pakken skal få 
+        passere gjennom ruteren eller ikke 
+        Kan brukes for å kontrollere aksess til spesifikke tjenester på spesifikke datamaskiner 
+
+    VPN:
+         Bruker kryptering for å tilby sikker aksess til et lokalt nettverk for klienter som befinner seg utenfor
+         Opprinnelig laget for å koble sammen lokale nettverk til en organisasjon som er fysisk distrubriert i et 
+         sikkert virtuelt nettverk
+
+      Pakkekryptering kontra tunnelering:
+        Det sendes hovedsakelig tre valgmuligheter mht. hvordan pakker som skal sendes over internett kan krypteres: 
+        Payload encryption, IP-in-IP tunneling og IP-in-TCP tunneling
+        
+        Payload encryption:
+            Krypterer kun meldingsinnholdet i pakken 
+
+        IP-in-IP:
+            Krypterer både meldingsinnholdet og hodet og plasserer resultatet i en ny pakke, 
+            som så kan sendes over internett
+
+        
+
+
+}
