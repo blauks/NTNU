@@ -43,3 +43,4 @@ def bin_to_txt(binstring):
     return streng
 
 print(bin_to_txt("101000010001101"))
+
