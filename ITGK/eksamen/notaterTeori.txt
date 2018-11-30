@@ -229,10 +229,10 @@ Protokoller:
         - feilhåndtering 
         - Uventede hendelser (f.eks. ingen respons fra mottaker)
     
-    En protokoll bær kunne håndtere deler av kommunikasjon som ikke håndteres av andre protokoller 
+    En protokoll bør kunne håndtere deler av kommunikasjon som ikke håndteres av andre protokoller 
     Protokoller i en familie er orgainsert i lag 
     Den lag-baserte modellen (layering model) gjør det lettere å håndtere kompleksiteten i nettverkskommunikasjon 
-    TCP/IP protokollen:
+    TCP/IP protokollen:     
         Applikasjon:
             Snapchat, YouTube, netflix, WWW
         Transport: 
