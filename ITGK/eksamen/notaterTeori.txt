@@ -6,7 +6,7 @@ Primærminne:
     RAM: Random accsess memory
     Flyktig (ikke permanent)
     Alle elementer fra RAMen kan hentes direkte (altså ikke sekventsiell, som LP/kassetter/spolebånd)
-Sekundærminne: Hardddisk 
+Sekundærminne: Harddisk 
     Høy-kapasitet 
     Lagrer programmer og data som ikke øyeblikkelig er i bruk av datamaskinen 
     Informasjonen beholdes uansett om datamaskinen er av eller på
@@ -60,7 +60,7 @@ Datamaskinen består av fem grunnleggende deler/subsystemer:
         Når ALUen er ferdig sørger Result Return steget for å flytte svaret til der den skal
 
     Input-enhet (Tastatur, mus osv.)
-    Output-enhet (Skjerm høyttaler osv.) En driver for hver output-enhet
+    Output-enhet (Skjerm høyttaler osv.) En driver for hver input/output-enhet
         De kablene og kretsene om infomasjon flyttes inn og ut av datamaskinen gjennom 
 
 Disse delsystemene er bundet sammen av busser
@@ -184,7 +184,7 @@ Digitale bilder og video:
 
     Komprimering: 
         Tapsløs/tapskoding:
-            Tapsløs, lossloss: halvering - tredeling, den originale representasjonen av 0ere og 1ere kan bli rekonstruert perfekt
+            Tapsløs, lossless: halvering - tredeling, den originale representasjonen av 0ere og 1ere kan bli rekonstruert perfekt
             Tapskoding, lossy: Større effekt, avhengig av tap, originale representasjonen kan ikke rekonstrueres eksakt 
     
     JPG, PNG, osv osv. 
@@ -234,7 +234,7 @@ Protokoller:
     Den lag-baserte modellen (layering model) gjør det lettere å håndtere kompleksiteten i nettverkskommunikasjon 
     TCP/IP protokollen:     
         Applikasjon:
-            Snapchat, YouTube, netflix, WWW
+            Snapchat, YouTube, netflix, WWW, HTTP, SMTP 
         Transport: 
             TCP: ntnu.no, google.no
         Internett:
@@ -256,7 +256,7 @@ OSI-referansemodellen:
 Feilkilder i overføring av data:
     Feildetekterings-mekanismer er ressurskrevende 
     Interference(Forstyrrelse)
-        Elektromagentisk stråling kan forstyrre radiosignaler 
+        Elektromagentisk stråling kan forstyrre radiosignaler f
     Distortion(forvrengning)
         Signaler kan forvrenges, f.eks. av metallobjekter 
     Attenuation(svekking):
