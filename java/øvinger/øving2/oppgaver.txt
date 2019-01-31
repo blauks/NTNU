@@ -1,0 +1,13 @@
+1. En synslighetsmodifikator viser om en variabel er offentlig eller privat, kan også ha ingenting. 
+2. Forskjellen på private og public er at public, er at de attributtene som er private kan man ikke referere til utenfor klassen, mens
+de som er public kan man referere til utenfor.
+
+
+Account oppgaver:
+    1. Metodene kan ikke bli brukt til andre måter en det som er tiltenkt
+    2. Denne klassen er data-orientert siden den fokuserer på getter og setter metoder
+
+
+Person:
+    1. public fornavn og private etternavn
+    2. 1. private email 2. private første del av email 
