@@ -1,0 +1,5 @@
+1. HTTP, TCP, ARP
+2. It took about 0.155481066 seconds
+3. The internet address of the gaia website is 128.119.245.12 
+My internet address is 192.168.1.230
+4. *Pictures are in seperate files* 

@@ -1,0 +1,6 @@
+static brukes til å definere en variabel til å "være selvstendig" [3]
+final variabler kan ikke endres på senere, (const fra JS)
+strong independent variabel
+
+innkapsling -> definere hvilke variabler til et objekt som skal være "private" og hvilke som skal være "offentlige" 
+

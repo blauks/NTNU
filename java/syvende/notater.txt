@@ -1,0 +1,3 @@
+fxml:
+    - type XML for å lage brukergrensesnitt til Java-programmer 
+
