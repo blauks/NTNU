@@ -25,6 +25,7 @@ while True:
         response = outputdata + "\r\n"
         connectionSocket.send(response.encode())
         connectionSocket.close()
+        print(message)
 
     except (IOError, IndexError):
         connectionSocket.send(b"HTTP/1.1 404\r\n\r\n")
