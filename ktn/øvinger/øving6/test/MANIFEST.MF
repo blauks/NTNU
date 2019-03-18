@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Nilhcem
+Main-Class: com.nilhcem.fakesmtp.FakeSMTP
+SplashScreen-Image: META-INF/splash.png
+
