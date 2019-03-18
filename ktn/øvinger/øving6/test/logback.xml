@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{dd MMM yyyy HH:mm:ss} %-5p %c - %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- Custom appender, for sending the SMTP logs in the swing application directly -->
+	<!-- If you modify this part, please change also the "logback.appender.name" key in the configuration.properties file -->
+	<appender name="SMTPLOGS" class="com.nilhcem.fakesmtp.log.SMTPLogsAppender" />
+	<logger name="org.subethamail.smtp.server.Session" level="DEBUG">
+		<appender-ref ref="SMTPLOGS" />
+	</logger>
+	<logger name="org.subethamail.smtp.server.ServerThread" level="INFO">
+		<appender-ref ref="SMTPLOGS" />
+	</logger>
+
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
