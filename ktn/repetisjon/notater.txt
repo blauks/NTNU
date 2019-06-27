@@ -1,0 +1,9 @@
+Applikasjon - melding
+Transport - segment
+Nettverk - datagram
+Link - frame
+Fysisk
+
+Effektivitet for CSMA/CD = 1 / (1 + 5t(prob)/t(trans))
+
+
