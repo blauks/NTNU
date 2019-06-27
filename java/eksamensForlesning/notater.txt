@@ -1,0 +1,14 @@
+Innkapsling:
+    - public, private, protected
+    - final, static
+    - Gir kun tilgang til det man trenger
+
+public: synlig for alle
+protected: synlig for klassen og underklasser
+private: bare synlig for klassen
+
+final: modifikator, gjør at det ikke blir mulig å endre på variabelen i etterkant, kan fortsatt bruke add/remove på lister som er final, kan ikke sette list lik en annen list
+
+static: brukes om vi ikke trenger å bruke intern tilstand i en metode, 
+
+
