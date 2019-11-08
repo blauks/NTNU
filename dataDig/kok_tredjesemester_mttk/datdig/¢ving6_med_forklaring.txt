@@ -1,0 +1,40 @@
+0x00 ldi %r2, 1 
+0x04 ldi %r1, 1 
+0x08 mul %r2, %r2, %r0 
+0x0C sub %r0, %r0, %r1 
+0x10 cmp %r3, %r0, %r1 
+0x14 jgt %r3, -16
+
+Assume that register %r0 contains 1 before the program is executed. Given the microarchitecture in Section 2 
+and the control unit’s state machine in Section 3, write down the values of the control unit’s output 
+signals for each executed instruction in the following order: imm, alu, regw, branch.
+
+linje 0: %r0 = 1
+linje 1: %r2 = 1
+linje 2: %r1 = 1
+linje 3: %r2 = 1 * %r0 = 1 * 1 = 1
+linje 4: %r0 = %r0 - 1 = 1 - 1 = 0
+linje 5: %r3 = (0 < 1) = (%r0 < %r1) = %r3[1] = 0 
+linje 6: %r3[1] = 0: ikke kjørt.
+
+Leser av state machine:
+linje 1: opc = 0 (ldi)
+imm = 1, alu=3, regw = 1, branch = 0
+linje 2: opc = 0 (ldi)
+imm = 1, alu=3, regw = 1, branch = 0
+linje 3: opc = 2 (mul)
+imm = 0, alu=4, regw = 1, branch = 0
+linje 4: opc = 5 (sub)
+imm  = 0, alu = 5, regw = 1, branch = 0 
+linje 5: opc = 3 (cmp)
+imm = 0, alu=1, regw=1, branch = 0
+linje 6: opc = 4 (jgt)
+imm = 0, alu=2, regw=0, branch=1
+
+altså er løsningen
+1 3 1 0
+1 3 1 0
+0 4 1 0
+0 5 1 0
+0 1 1 0
+0 2 0 1

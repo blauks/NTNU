@@ -1,0 +1,259 @@
+.thumb
+.syntax unified
+
+.include "gpio_constants.s"     // Register-adresser og konstanter for GPIO
+.include "sys-tick_constants.s" // Register-adresser og konstanter for SysTick
+
+.text
+	.global Start
+	
+//Interrupt function/vector/handling
+.global SysTick_Handler
+.thumb_func
+SysTick_Handler:
+
+	LDR R7,[R0] // Laster inn nå tiendels sekund verdi inn i R7
+	CMP R7,R4 //Sammenligner med maks tiendels verdi
+	BEQ handle_tenths
+		//Går inn hit om ikke oppfylt, går til handle_tenths: om ompfylt
+		//Inkrementerer tiendels som vanlig
+		ADD R7,R7,R3//Add R7 med R3 og sett resultatet i R7
+		STR R7,[R0]//Store det som er i R7 i adressen R0 (tenths)
+		B end_handle_tenths//hopp til end_handle_tenths
+	handle_tenths:
+		//Her settes da tiendels til null
+		MOV R7,#0//Last verdi 0 inn i R7
+		STR R7,[R0]//Store det som er i R7 i adressen R0 ( tenths )
+
+		//LED0 håndteres
+		//Registre R7,R8, R9 og R10 er nå ledige
+		MOV R7,#1
+		LSL R7,#LED_PIN
+
+		LDR R10,=GPIO_BASE
+		LDR R8,[R10,R11]//Det som ligger på adressen til LED0 lastes inn i R8
+
+		AND R9,R8,R7 //ANDer R8 og R7, hvis R7 og R8 er like, blir resultatet R7, ellers 0
+
+		CMP R9,R7
+		//Hvis de er like, er LED0 allerede på . ellers er den av,
+		BEQ led_is_on
+			//Hvis av, skru på
+
+			STR R7,[R10,R11]
+
+			B led_done
+		led_is_on:
+			//Hvis på, skru av
+			MOV R8,#0
+			STR R8,[R10,R11]
+
+		led_done:
+
+
+		//Da må sekunder incrementeres
+		LDR R8,[R1] //Laster inn nå værende sekund verdi inn i R8
+		CMP R8,R5 // sammenligner med maks sekund verdi
+		BEQ handle_secs
+			//inkrementer sekunder som vanlig
+			ADD R8,R8,R3
+			STR R8,[R1]
+			B end_handle_secs
+		handle_secs:
+			//Går hit hvis nåværende sekund verdi er lik maks sekund verdi
+			//Her settes sekunder til null
+			MOV R8,#0
+			STR R8,[R1]
+			//Da vet vi at minutter må inkrementeres
+			LDR R9,[R2]
+			CMP R9,R6 // sammenligner med maks sekund verdi
+			BEQ handle_mins
+				//Incrementer minutter som vanlig
+				ADD R9,R9,R3
+				STR R9,[R2]
+				BX LR
+			handle_mins:
+				//Her settes da alt til null siden displayen viser ikke større
+				MOV R9,#0
+				STR R9,[R0]
+				STR R9,[R1]
+				STR R9,[R2]
+		end_handle_secs:
+
+	end_handle_tenths:
+
+	BX LR
+
+
+
+//Interrupt for knappen
+.global GPIO_ODD_IRQHandler
+.thumb_func
+GPIO_ODD_IRQHandler:
+
+
+
+
+
+
+
+
+	LDR R1,=SYSTICK_BASE
+	MOV R2,#SYSTICK_CTRL
+	LDR R3,[R1,R2]
+	MOV R4,#1
+	EOR R5, R4, R3
+	STR R5,[R1, R2]
+
+	LDR R0,=GPIO_BASE
+	MOV R1,#GPIO_IFC
+	MOV R3,#1
+	LSL R3, R3, #9
+
+	STR R3, [R0, R1]
+
+
+	//Interrupt er blitt behandlet
+	/*
+	LDR R0,=GPIO_BASE
+	MOV R1,#GPIO_IFC
+	MOV R3,#1
+	STR R3, [R0, R1]
+
+	LSL R4,R3,9
+	LDR R5,[R0,R1]
+	MVN R6,R4
+	AND R5,R5,R6
+	STR R5,[R0,R1]
+*/
+
+	//Vi må sette tilbake registre for adressene til riktige verdier
+	LDR R0,=tenths
+	LDR R1,=seconds
+	LDR R2,=minutes
+	MOV R3,#1
+	MOV R4,#9
+	MOV R5,#59
+	MOV R6,#59
+
+	BX LR
+
+
+
+
+Start:
+//FASTE REGISTRE OG VERDIER ETTER OPPSETT AV KLOKKA:
+//R0 : Adress tenths
+//R1 : Adress secs
+//R2 : Adress mins
+//R3 : Increment value
+//R4 : Max tenths
+//R5 : Max secs
+//R6 : Max mins
+//R7 : Free
+//R8 : Free
+//R9 : Free
+//R10: Free
+//R11: Adressen til LED0
+//R12: Adressen til PB0
+
+//Initienring av klokka
+
+LDR R0,=SYSTICK_BASE
+MOV R1,#SYSTICK_CTRL
+MOV R3,0b110
+STR R3,[R0,R1]
+//Nå er klokken initiert
+
+//Interrupt frekvensen settes
+
+MOV R1,#SYSTICK_LOAD
+LDR R3,=FREQUENCY/10
+STR R3,[R0,R1]
+
+//Satt
+
+//Val settes sånn at første tick er riktig VAL = LOAD
+
+MOV R1,#SYSTICK_VAL
+STR R3,[R0,R1]
+
+//Satt
+
+//Aktivering av interrupts for knappen PB0
+
+
+MOV R0,#GPIO_EXTIPSELH
+LDR R9,=GPIO_BASE
+
+MOV R1,0b1111
+LSL R2,R1,#4
+MVN R3,R2
+LDR R4,[R9,R0]
+AND R5,R3,R4
+MOV R6,#PORT_B
+LSL R7,R6,4
+ORR R8,R5,R7
+STR R8,[R9,R0]
+
+//EXTIFALL aktivering
+//BIT 9 SKAL SETTES TIL 1
+MOV R0,#1
+MOV R1,#GPIO_EXTIFALL
+LDR R2,=GPIO_BASE
+LSL R4,R0,#9
+LDR R5,[R2,R1]
+ORR R6,R5,R4
+STR R6,[R2,R1]
+
+LDR R0,=GPIO_BASE
+MOV R1,#GPIO_IFC
+MOV R3,#1
+LSL R3, R3, #9
+
+STR R3, [R0, R1]
+
+//ENBLE INTERRUPT
+MOV R0,#1
+
+LSL R1,R0,9
+LDR R2,=GPIO_BASE
+MOV R3,#GPIO_IEN
+LDR R4,[R2,R3]
+ORR R5,R4,R1
+STR R5,[R2,R3]
+
+
+
+
+//Initiering av første visning på skjermen
+
+MOV R1,#0
+LDR R0,=tenths
+STR R1,[R0]
+
+//Oppsett av adressene til tenhts o.s.v
+//Opsett av verdier som ikke endrer seg, max minutt o.s.v.
+
+LDR R0,=tenths
+LDR R1,=seconds
+LDR R2,=minutes
+MOV R3,#1
+MOV R4,#9
+MOV R5,#59
+MOV R6,#59
+
+MOV R8,#LED_PORT
+MOV R9,#PORT_SIZE
+MUL R11,R8,R9
+ADD R11,R11,#GPIO_PORT_DOUT
+
+
+
+//Loopes til en interrupt tar sted
+loop:
+B loop
+
+
+
+NOP // Behold denne pÃ¥ bunnen av fila

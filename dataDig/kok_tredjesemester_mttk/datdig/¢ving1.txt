@@ -1,0 +1,73 @@
+.thumb
+.syntax unified
+
+.include "gpio_constants.s"     // Register-adresser og konstanter for GPIO
+
+.text
+	.global Start
+	
+Start:
+
+	LDR R0,=GPIO_BASE // Last inn GPIO adressen til R0
+
+    MOV R1,#LED_PORT // sett led port adressen over til R1
+    MOV R2,#PORT_SIZE // sett port størrelsen over til R2
+    MUL R1,R1,R2 // Gange sammen størrelsen på porten med antall porter og sett resultatet over til R1
+    LDR R2,=GPIO_PORT_DOUT // Laste inn adressen til utpinnen til LED
+    ADD R1,R1,R2 // sett over til R1 adressen til utpinnen pluss offsettet
+
+	//Nå finner vi adressen til PB0 knappen
+	//Alt etter samme logikk som med funn av LED adressen
+
+	MOV R7,#BUTTON_PORT
+	MOV R8,#PORT_SIZE
+	MUL R7,R7,R8
+	LDR R8,=GPIO_PORT_DIN
+	ADD R7,R7,R8
+
+	//Adressen til knappen ligger nå i R7
+
+    restart:
+    //Sjekk først om knappen er på
+
+    LDR R9,[R0,R7] //laster inn i R9 adressen til knappen
+    MOV R10,#1
+    LSL R10,R10,#BUTTON_PIN
+	AND R12,R9,R10 //Bitwise AND utføres på R9 og R10 med resultat satt til R12
+	CMP R12,#0
+	BNE not_pushed //Hvis verdien er null, hopper over til not_pushed for å skru av knappen
+
+	//Ellers fortsetter her
+
+    MOV R3, #1 // Laster inn verdi 0000000000000001
+    LSL R3,R3,#LED_PIN // Forskyver slik at vi nå har 0000001000000000
+    LDR R4,[R0,R1] // Laster inn det som allerede står på LED DOUT registre
+    ORR R5,R4,R3 // Kjører OR mellom det som allerede er i LED DOUT og R3
+    //Dette for at vi får tallet 1 på den niende bittet i registre uten å forandre på
+    //det som allerede er der.
+    STR R5,[R0,R1]//Ferdig resultat lagres i LED DOUT registret
+
+
+    B restart
+
+    not_pushed:
+
+	//Skrur av LED
+
+    MOV R3, #0
+    LSL R3,R3,#LED_PIN
+    STR R3,[R0,R1]
+
+    //På de siste tre linjene er det egentlig en grov feil
+    //Koden kommer til å kjøre og i aller fleste tilfeller vil ønsket resultat oppnås
+    //Men det er en veldig viktig ting som er utelatt
+    //Tips: Se hva som er annerledes fra tilfellet hvor LED skal skrus på istedet
+
+    B restart
+
+
+
+
+
+
+NOP // Behold denne pÃ¥ bunnen av fila
