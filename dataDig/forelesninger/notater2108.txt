@@ -1,0 +1,16 @@
+Turing: 
+    - Finnes det noen funksjoner som ikke kan utregnes?
+    - Viktig å skrive ned tilstand (mtp. datamaskiner), lettere å beregne
+
+- Umulig å finne ut om et program sitter fast i en loop, eller om det har stoppa
+
+Orakel(P, i) -> loop || -> stopper
+    - DEVIL(Q): 
+        if Orakel(P,P) == HALT:
+            while True
+        else 
+            return 42
+
+DEVIL(DEVIL)
+
+

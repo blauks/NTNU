@@ -1,0 +1,10 @@
+17. September øvingsforelesning
+
+O er en mindre streng versjon av o
+
+Quicksort
+	Worst case: n^2, når du har en sortert liste
+
+Utvidelsesmetoden: 
+	Skrive ut rekkurensen slik at du har et definert T(n)
+	
