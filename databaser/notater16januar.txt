@@ -1,0 +1,14 @@
+Notater 16. Januar - Datamodellering med ER-modeller:
+
+Fotografi:
+ ID
+ Tittel
+ Dato 
+ Skal ha en fotograf / kan være ukjent 
+
+
+Fotografer:
+    ID
+    Navn
+    Nasjonalitet 
+

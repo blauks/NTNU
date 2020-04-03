@@ -1,0 +1,36 @@
+Ønsker å designe en database som lagrer informasjon om filmer, serier, skuespillere og utgivelsesselskaper
+
+Filmer:
+	Kan opprinnelig være laget for kino, TV eller streaming
+	Kan være serier med mange episoder og sesonger
+	Kan være utgitt på video
+	Filmer finnes i mange forskjellige kategorier, kan ha flere kategorier 
+	En film har en eller flere regisører 
+	En film har en tittel, regissører, manusforfattere, lengde, utgivelsesår, lanseringsdato og en beskrivelse
+	av innhold
+
+Serier:
+	Mer kompliserte
+	Mange regissører, manusforfattere, skuespillere osv. som har ansvar for eller spiller i en eller flere  episoder 
+
+Det er også musikk tilknyttet til filmer. Vi vil gjerne vite hvem som har komponert og framført musikken 
+
+Skuespillere:
+	Har navngitte roller i filmer
+	Ønsker å vite hvilke roller skuespillere har i de forskjellige filmene
+	Vi ønsker også å vite navn, fødslesår og fødselsland for skuespillere, manusforfattere og regissører 
+	Manusforfattere og regissører kan også være skuespillere i sin egen film
+
+For selskaper vet vi URL, adresse og land 
+
+Databasen har også registrerte brukere som kan kommentere og anmelde filmer, serier, episoder osv.
+	Sette inn tekst og en rating fra 1 til 10
+
+
+Databasen sin usecase:
+	Finne navnet på alle rollene en gitt skuespiller har 
+	Finne hvilke filmer som en gitt skuespiller opptrer i
+	Finne hvilke filmselskap som lager flest filmer innenfor hver sjanger
+	Sette inn en ny film med regissør, manusforfatter, skuespiller og det som hører med
+	Sette inn en ny anmeldelse av en episode av en serie  
+	

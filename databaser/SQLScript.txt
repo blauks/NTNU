@@ -1,0 +1,7 @@
+CREATE TABLE filmer ( 
+	filmID int unsigned NOT NULL AUTO_INCREMENT,
+	lagetFor VARCHAR(12) NOT NULL,
+	utgittPåVideo BOOLEAN NOT NULL,
+	
+
+)
