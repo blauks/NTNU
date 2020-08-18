@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onload="draw(0)">
+    <div class="artistIntroducton">
+        <h1>A masterpiece</h1>
+        <div class="introduction">
+            <h2>Who am I, and why am I the perfect artist?</h2>
+            <p>Hi, I am the famous artist who goes under a secret alias, and this is my newest art piece.
+                My only hobby is making art. I am the perfect artist because I manage to encapsulate so much feeling, passion and colours 
+                into a small canvas. I have impacted so many people with my emotionally charged art, and I will continue to do so 
+                for the rest of my days.
+            </p>
+        </div>
+    </div>
+    <div class="art">
+        <div class="canvasArt">
+            <canvas id="canvasDrawing" width="500" height="500"></canvas>
+            <p><b>Abstract representation of Thanos with his gauntlet glove</b></p>
+        </div>
+        <div class="svgArt">
+            <svg width="500" height="500" id="svgDrawing">
+                <rect width="500" height="500" style="fill: salmon;"/>
+                <polyline points="20,50 20,70" style="fill:none; stroke: black; stroke-width:3" /> 
+                <polyline points="40,50 40,70" style="fill:none; stroke: black; stroke-width:3" />
+                <polyline class="smile" points="10,80 20,90 40,90 50,80" style="fill:none; stroke: black; stroke-width:3" />  
+                <polyline class="frown" points="10,90 20,80 40,80 50,90" style="display: none; fill:none; stroke: black; stroke-width:3"/>  
+                <polygon points="0,500 250,500 125,150" style="fill: aquamarine; " />
+                <polygon points="200,75 350,0 500,0 500,150" style="fill: tomato" />
+                <polygon points="500,500 500,400 200,160 400,500" style="fill: skyblue;" />
+                <circle cx="135" cy="100" r="30" fill="hotpink"/>
+            </svg>
+            <p><b>Abstract representation of Thanos with his gauntlet glove - but in SVG format</b></p>
+        </div>
+    </div>
+    <p><i>PS. He does not like being touched</i></p>
+    <div class="documentationHolder">
+        <button class="documentationButton">Press me for documentation</button>
+        <div class="documentation" style="display: none;">
+            <p>I am documentation</p>
+        </div>
+    </div>
+    <div class="reviews">
+        <div class="review">
+            <p><i>"A great piece of art that really represents the current political landscape."</i></p>
+            <p>5 Stars</p>
+            <p><b>The Times</b></p>
+        </div>
+        <div class="review">
+            <p><i>"Five out of seven, reminds me of the time I watched that one Marvel film"</i></p>
+            <p>4 Stars</p>
+            <p><b>Aftenposten</b></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
