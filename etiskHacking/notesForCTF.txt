@@ -1,0 +1,35 @@
+FLAG 01:
+
+FLAG 02:
+
+FLAG 03:
+
+FLAG 04:
+
+FLAG 05:
+
+FLAG 06:
+
+FLAG 07:
+
+FLAG 08:
+
+FLAG 09:
+
+FLAG 10:
+
+FLAG 11:
+
+FLAG 12:
+
+FLAG 13:
+f9a612a964547f8cfb22f5d66ecc47f5
+http://129.241.200.165:18450/test.php
+
+FLAG 14:
+
+USERNAME:
+jonatbr@stud.ntnu.no
+
+PASSWORD:
+
