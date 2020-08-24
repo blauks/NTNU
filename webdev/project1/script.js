@@ -1,11 +1,14 @@
 $(document).ready(documentReady());
 
-function draw(mod) {
+let backgroundColours = ["#fa8072", "#f5f5dc", "#a52a2a", "#fff8dc", "#5f9ea0", "#f8f8ff", "#fffff0"];
+let currentColour = backgroundColours[0];
+
+function draw(mod, backgroundColour) {
     let canvas = document.getElementById("canvasDrawing");
     let ctx = canvas.getContext('2d');
 
     //Background
-    ctx.fillStyle = "salmon";
+    ctx.fillStyle = backgroundColour;
     ctx.fillRect(0,0, 500, 500);
 
     //Blue triangle
@@ -58,22 +61,16 @@ function draw(mod) {
 }
 
 function documentReady() {
-    $(".documentationButton").click(showOrHideDocumentation);
+    $(".documentationButton").click(function () { $(".documentation").toggle() });
+    
     $("#svgDrawing").hover(changeMoodOfSVGThanos);
     $("#canvasDrawing").hover(changeMoodOfCanvasThanos);
 
-}
-
-function showOrHideDocumentation() {
-    if($(".documentation").is(":visible")) {
-        $(".documentation").hide();
-    } else {
-        $(".documentation").show();
-    }
+    $("#canvasDrawing").click(function (e) { changeBackgroundColourCanvas(e) });
 }
 
 function changeMoodOfSVGThanos() {
-    if($("#svgDrawing:hover").length != 0){
+    if($("#svgDrawing").is(":hover")){
         $(".smile").hide();
         $(".frown").show();
     }
@@ -84,11 +81,23 @@ function changeMoodOfSVGThanos() {
 }
 
 function changeMoodOfCanvasThanos() {
-    if($("#canvasDrawing:hover").length != 0){
-        draw(10);
+    if($("#canvasDrawing").is(":hover")){
+        draw(10, currentColour);
     }
     else {
-        draw(0);
+        draw(0, currentColour);
     }
 }
 
+function changeBackgroundColourCanvas(e) {
+    let x = e.pageX - $('#canvasDrawing').offset().left
+    let y = Math.floor(e.pageY - $('#canvasDrawing').offset().top)
+    let colourData = document.getElementById("canvasDrawing").getContext('2d').getImageData(x, y, 1, 1).data
+    let pixelHexColour = "#"+colourData[0].toString(16)+colourData[1].toString(16)+colourData[2].toString(16)
+    //Checks if the pixel that is pressed is the same as the background colour, and if it is the background colour changes
+    //This is to make it so that you must press the background to change its colour
+    if(pixelHexColour === currentColour) {
+        currentColour = backgroundColours[Math.floor(Math.random() * 6)];
+        draw(10, currentColour);
+    }
+}

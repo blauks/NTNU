@@ -15,6 +15,11 @@ body {
     width: 500px;
 }
 
+#svgDrawing{
+    width: 500px;
+    height: 500px;
+}
+
 .art {
     display: flex;
 }
@@ -26,6 +31,10 @@ body {
     background-color: hotpink;
     border-color: aqua;
     color: white;
+}
+
+.documentation {
+    text-align: left;
 }
 
 .reviews {
@@ -60,5 +69,12 @@ body {
     .reviews {
         width: 500px;
         flex-direction: column;
+    }
+}
+
+@media all and (max-width: 525px) {
+    #svgDrawing {
+        height: 80%;
+        width: 80%;
     }
 }
