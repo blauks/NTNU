@@ -1,0 +1,1 @@
+b'Hallo Antwerp tower. Ship ID: XX cargo ship YYYY. Received session key: fefea443a59ac24377a072e307c0b0ee'

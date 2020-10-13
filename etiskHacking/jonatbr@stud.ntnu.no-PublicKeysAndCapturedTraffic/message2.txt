@@ -1,0 +1,1 @@
+b'Hallo Suez Canal tower. Ship ID: XX cargo ship YYYY. Received session key: b47a45662b2fe6a702aacfd4a4206847'

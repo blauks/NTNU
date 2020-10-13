@@ -1,35 +1,65 @@
 FLAG 01:
+2baba63d6dbdc2d0ca6fb0ad27034737
+admin
+porschealexandr
 
 FLAG 02:
+6058b52be3fc07253b2e5b09e35c13c2
+Forgot password
 
 FLAG 03:
+2cccf3485a3dcde01bcf03a6867ec146
 
 FLAG 04:
+18412492540201312337
+CB0CE2C80A83E01511B7AEA17A60626A
+cb0ce2c80a83e01511b7aea17a60626a
 
 FLAG 05:
+10313caa487ca5c385f54cd55f3d95dd
 
 FLAG 06:
+Flag06 part 1/6: d3b8604fe3da
+Flag06 part 2/6: e949
+Flag06 part 3/6: 49b9
+Flag06 part 4/6: e02b
+Flag06 part 5/6: b7a6
+Congratulaton!! The final part of the Flag06 is : 30f0 
+http://129.241.200.165:18450/?page=../../../../../../../etc/passwd
+
+d3b8604fe3dae94949b9e02bb7a630f0
 
 FLAG 07:
+702cf377e59af1a47ae3009534623251
 
 FLAG 08:
+b'aaw3wdd'
+25f8686db6d14914be58a9e1bd394320ccca2b2e6fc394d3ad14c94834623251
+04d1ab1f13a79b63657bb96e8b68633e
 
 FLAG 09:
+c1f02bbd538384ebb72267d3024831ec
 
 FLAG 10:
+1 UNION SELECT comment07, null FROM clients
+I user search
+00f81394154495382f402cb9273e9deeb9b5030db7ca2e59d376ee1364a7a233
 
 FLAG 11:
+914add60ea03454fcac219731781a3b1
 
 FLAG 12:
+cca68cae384f1318a5338129617c8739
 
 FLAG 13:
 f9a612a964547f8cfb22f5d66ecc47f5
 http://129.241.200.165:18450/test.php
 
 FLAG 14:
+0f41209311e9fc812a06ee7fe588b990
 
 USERNAME:
-jonatbr@stud.ntnu.no
+admin and root
 
 PASSWORD:
-
+porschealexandr

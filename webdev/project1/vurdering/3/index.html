@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 1</title>
+
+    <script src = "js/jquery-3.5.1.js"></script>
+    <script src = "js/my.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class = "header">
+            <h1>Prosjekt 1</h1>
+            <h5>SVG og HTML5 Canvas</h5>
+        </div>
+        <div class="about">
+            <p>
+                Vincent van Gogh elsket kunst fra en tidlig alder, men begynte ikke å male produktivt før han var nesten 30 år. I de resterende sju årene av sitt liv malte van Gogh mer enn 2000 verk, bestående av 900 malerier og 1100 skisser og tegninger. Før kunstkarrieren arbeidet van Gogh for ulike kunsthandlere, blant annet i London, Paris og Haag. Han fikk liten anerkjennelse i sin levetid. Kun en håndfull mennesker visste om van Goghs talenter, og selv fikk han kun solgt ett maleri mens han levde.
+
+                Det gikk tre år fra hans tungsindige malerier der Potetspiserne er representativt, til hans fargeeksplosive malerier som ble gjort i Arles. Noen av van Goghs mest kjente verk er Stjernenatt og Portrett av Dr. Gachet, som er noen av de mest ettertraktede maleriene i verden. Flere av van Goghs malerier har oppnådd noen av de høyeste prisene i kunsthistorien. Maleriet Portrett av Dr. Gachet ble i 1990 solgt for 144 millioner dollar (rundt 800 millioner kroner). Nesten alle av hans malerier er i dag samlet ved Van Gogh-museet i Amsterdam og Kröller-Müller-museet nær Otterloo.
+
+                Van Gogh produserte de fleste av sine verk gjennom en periode på 10 år, før han til slutt ga seg. Van Gogh led mest sannsynlig av mange sinnslidelser, blant annet bipolar lidelse, og begikk muligens selvmord i 1890. Hans berømmelse vokste fort etter hans død, og utallige kunstnere etter van Goghs levetid har nevnt ham som en inspirasjonskilde
+            </p>
+        </div>
+
+
+        <div class = 'svg-container'>
+            <h3>
+                SVG kunstverk
+            </h3>
+
+            <svg id="svg" viewBox="0 0 500 500" width="500" height="500">
+                <circle id="outer-cirlce" r="196" cx="250" cy="250" style = "fill: red; stroke: black; stroke-width: 1px;"/>
+                <polygon id="outer-poly" points="175,69 325,69 431,175 431,325 325,431 175,431 69,325 69,175" style = "fill:lime;"/>
+                <rect id="vert-rect" x="175" y="69" width="150" height="362" style="fill:blue;"/>
+                <rect id="hori-rect" x="69" y="175" width="362" height="150" style="fill:black;"/>
+                <polygon id="star" points="250,175 200,325 325,225 175,225 300,325" style="fill:lime;fill-rule:nonzero;"/>
+
+
+            </svg>
+
+            <div class = 'svg-button'>
+                Click me!
+            </div>
+        </div>
+
+        <div class = "canvas-container">
+            <h3>
+                Canvas kunstverk
+            </h3>
+
+            <canvas id = "canvas" width = "500" height = "500">
+            </canvas>
+
+            <div class="canvas-button">
+                Click me!
+            </div>
+        </div>
+
+
+        <div class = "documentation">
+            <div class = "doc-button">
+                Vis/skjul dokumentasjon
+            </div>
+            <div class="doc-section-1">
+                <h2>Dokumentasjon</h2>
+                <h4>CSS-grid og flexbox-layout</h4>
+                <p>Jeg valgte å bruke CSS-grid, og ikke flexbox-layout da CSS-grid fungerte bra. CSS-grid er her brukt på to ulike måter, avhengig av størrelsen på nettleseren. Når nettleseren har en bredde på mindre enn 600px så er siden delt inn i fem rader og en kolonne. Når nettleseren er bredere enn 600px er siden delt inn i fire rader og to kolonner. Her er det færre rader siden de to bildene kommer på samme rad. Dette er gjort for at bildene ikke skal bli for små når bredden på nettleseren bli liten. Jeg har også brukt place-items: start center og place-items: start stretch for å få innholdet i hver grid til å starte helt til venstre, og stå sentrert i høyden eller dekke hele høyden til gridden.</p>
+                <p>Når bredden er mindre enn 600px er griddene bygd opp på følgende måte: «header», «about», «svg», «canvas» og «documentation». Her er det ganske selvforklarende hva de ulike griddene inneholder. Alle griddene utenom den nederste er satt til grid-template-rows: auto og grid-template-columns: 100%. Dette fordi griddene skal tilpasse seg skjermstørrelsen under 600px. Den siste er satt til 1fr og 100%.</p>
+                <p>Når bredden er over 600px så blir griddene delt inn på følgende måte: «header header» «about about» «svg canvas» «documentation documentation». Dette for å få bildene ved siden av hverandre. Videre er documentation delt inn i: «button button» og «doc source» for at knappen for å vise/skjule dokumentasjonen blir sentrert, mens dokumentasjonen og kildene havner i hver sin kolonne.</p>
+                <p>Jeg valgte å ikke benytte meg av flexboxer da jeg oppnådde det jeg trengte med grid. I ettertid ser jeg at jeg kunne benyttet meg av flexbox internt i de ulike griddene for å oppnå samme effekt. I stedet for å bruke to ulike rader for bildene når nettleseren ble smal kunne jeg brukt flexbox wrap for å få det ene bildet til å flytte seg under det andre. Men siden dette var ganske enkelt med CSS-grid holdt jeg meg til det.</p>
+                <h4>SVG og canvas</h4>
+                <p>Begge bildene har en ramme på 500x500 px. Jeg lagde først SVG bildet og prøvde deretter å etterligne det i canvas. Elementene i SVG bildet er ulike geometriske figurer. Dersom man beveger musepekeren over bildet vil fargene til elementene endres. Dette er gjort ved å endre på «fill» verdien ved hjelp av jQuery sin css() funksjon. Når man trykker på knappen under bildet vil det bli utført en kort animasjon. Siden hvert element i SVG har sin egen ID var det lett å aksessere disse i my.js filen, og med det var det også greit å legge til ønsket animasjon på hvert element.</p>
+                <p>Canvas bildet er laget ved å opprette elementer i my.js filen og bruke verdiene til objektene i funksjoner for å tegne dem. Når man beveger musepekeren over bildet endres fargene på bildet på samme måte som på SVG bildet. Her har jeg laget en funksjon endrer på «fillStyle» verdiene til hvert objekt og tegner de på nytt med denne verdien. Når man tar musepekeren ut av bildet reverseres dette. Animasjonen til canvas bildet er en forenklet variant av den til SVG bildet da det var vanskelig å etterligne den i canvas. Her benytter jeg meg av en variabel «speed» som sier hvor fort høyden til det ene rektangelet, bredden til det andre og radiusen til sirkelen skal endres. Setupen til animasjonen er hentet fra en tutorial (se kilder). Etter at animasjonen har kjørt kan man trykke på knappen igjen for å resette bildet. Da endres høyde, bredde og radius tilbake til de original, og hvert element tegnes på nytt.</p>
+                <h4>jQuery</h4>
+                <p>Jeg har benyttet jQuery for å lage animasjon til SVG bildet, samt gi funksjon til de ulike knappene på nettsiden. Til animasjonene på SVG bildet har jeg brukt jQuery for å endre ulike CSS-verdier og brukt innebygde funksjoner som fadeOut(), fadeIn() og animate(). jQuery er også benyttet for å sjekke at siden er ferdig lastet inn før noe av javaScript koden kjører. Alle knappene benytter seg av click() funksjonen for å gjøre noe når de trykkes på. Knappen for å vise/skjule dokumentasjonen benytter seg av toggle() funksjonen. I tillegg er text() brukt for å endre teksten på knappene når de trykkes på. jQuery gjorde det også veldig enkelt å selektere de ulike elementene på siden. </p>
+                <h4>Cross-browser testing</h4>
+                <p>Jeg har benyttet jQuery for å lage animasjon til SVG bildet, samt gi funksjon til de ulike knappene på nettsiden. Til animasjonene på SVG bildet har jeg brukt jQuery for å endre ulike CSS-verdier og brukt innebygde funksjoner som fadeOut(), fadeIn() og animate(). jQuery er også benyttet for å sjekke at siden er ferdig lastet inn før noe av javaScript koden kjører. Alle knappene benytter seg av click() funksjonen for å gjøre noe når de trykkes på. Knappen for å vise/skjule dokumentasjonen benytter seg av toggle() funksjonen. I tillegg er text() brukt for å endre teksten på knappene når de trykkes på. jQuery gjorde det også veldig enkelt å selektere de ulike elementene på siden.</p>
+            </div>
+            <div class="doc-section-2">
+                <h2>Kilder</h2>
+                <p>Her er en liste med de viktigste sidene jeg har benyttet meg av:</p>
+                <ul>
+                    <li>CSS-grid: <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">css-tricks.com</a> og <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">mozilla.org</a></li>
+                    <li>jQuery: <a href="https://www.w3schools.com/jquery/jquery_hide_show.asp">w3schools.com</a> og <a href="https://api.jquery.com/">jquery.com</a></li>
+                    <li>SVG: <a href="https://www.w3schools.com/graphics/svg_intro.asp">w3schools.com</a></li>
+                    <li>Canvas: <a href="https://www.w3schools.com/graphics/canvas_intro.asp">w3schools.com</a> og <a href="https://www.html5canvastutorials.com/advanced/html5-canvas-animation-stage/">html5canvastutorial.com</a></li>
+                </ul>
+                <p>Brukte kodesnutt fra følgende nettside for deler av canvas animasjonen: <a href="https://www.html5canvastutorials.com/advanced/html5-canvas-animation-stage/">html5canvastutorial.com</a></p>
+                <p>Kom ikke på noe klokt å skrive om kunsteren, så det ble kopi av de første avsnittene til Vincent van Gogh sin <a href="https://no.wikipedia.org/wiki/Vincent_van_Gogh">Wikipediaside</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

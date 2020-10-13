@@ -1,0 +1,1 @@
+b'Hallo Gibraltar tower. Ship ID: XX cargo ship YYYY. Received session key: acd2a482f084d4d3db37abd807fdabd4'

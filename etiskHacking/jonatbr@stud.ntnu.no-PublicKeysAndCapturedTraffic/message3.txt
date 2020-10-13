@@ -1,0 +1,1 @@
+b'Hallo Bab-el-Mandeb tower. Ship ID: XX cargo ship YYYY. Received session key: c2b05b0a319163fcff62462520beb58e'
