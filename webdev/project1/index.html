@@ -26,7 +26,7 @@
         </div>
         <div class="svgArt">
             <svg id="svgDrawing">
-                <rect width="100%" height="100%" style="fill: salmon;"/>
+                <rect id="svgBackground" width="100%" height="100%" style="fill: salmon;"/>
                 <polyline points="20,50 20,70" style="fill:none; stroke: black; stroke-width:3" /> 
                 <polyline points="40,50 40,70" style="fill:none; stroke: black; stroke-width:3" />
                 <polyline class="smile" points="10,80 20,90 40,90 50,80" style="fill:none; stroke: black; stroke-width:3" />  
@@ -39,13 +39,13 @@
             <p><b>Abstract representation of Thanos with his gauntlet glove - but in SVG format</b></p>
         </div>
     </div>
-    <p><i>PS. He does not like being touched</i></p>
+    <p><i>PS. He does not like your pointer being in his personal space.</i></p>
     <div class="documentationHolder">
-        <button class="documentationButton">Press me to show/hide documentation</button>
+        <button class="documentationButton">Show documentation</button>
         <div class="documentation" style="display: none;">
                 <h3>Grid/Flexbox:</h3>
                 <p>
-                    I denne innleveringen har jeg valgt å kun bruke flexbox, dette var fordi jeg ikke trengte å plassere elementene mine i flere dimensjoner. 
+                    I denne innleveringen har jeg valgt å kun bruke flexbox, dette var fordi jeg ikke trengte å plassere alle elementene mine i flere dimensjoner. 
                     Måten jeg satt opp nettsiden på var å først dele opp “hovedelementene” i diver, 
                     og så gjøre slik at de er plassert på kolonne ved hjelp av flexbox. 
                     Deretter delte jeg opp kunst- og tilbakemelding-elementene inn i to egne diver, for å så bruke flexbox til å plassere underelementene side-om-side. 
@@ -61,12 +61,13 @@
                     De eneste problemene jeg støtte på var å sette punktene riktig, da det var litt uvant at punkt 0,0 var i øverste venstre hjørnet. 
                     Det å kopiere bilde til canvas var litt slitsomt siden man måtte skrive så mange flere linjer, 
                     men det gikk greit siden jeg visste hvor alt skulle være plassert.
-                    For å legge inn interaktiveten for SVG og Canvas måtte jeg gjøre det på to litt forskjellige måter. I SVG var det ganske enkelt,
-                    siden jeg bare trengte å lage et surt fjes som jeg viser hver gang musen er over bildet og gjemmer når musen ikke er der. I canvas 
-                    måtte jeg tegne hele canvaset igjen med et surt fjes, siden du ikke kan gjemme spesifikke deler av canvaset etter du har tegnet det.
-                    Dette går greit når bilde er så lite komplekst, men om bilde hadde hatt mange forskjellige elementer hadde det vært mer naturlig å bare tegne over den 
-                    spesifikke delen man vil endre. 
-                    Jeg har valgt å la bildene alltid være på 500x500 piksler, da jeg fant ut at å prøve å scale SVGer kan være veldig tidkrevende.
+                    Det å legge inn interaktivet i canvas og SVG var svært forskjellig. I SVG gikk alt ganske greit. Det jeg gjorde var å lage et surt fjes som jeg bare viser når jeg har 
+                    musepekeren over SVG tegningen, og hver gang jeg trykker på bakgrunnselementet så bytter bakgrunnsfargen. For å få til at "personen" ble sur i canvas måtte 
+                    jeg tegne hele bildet på nytt igjen med det nye ansiktsuttrykket, og for å få til at bakgrunnsfargen bare endret seg når jeg trykket på bakgrunnen 
+                    sjekker jeg hva fargen til pikselen som ble trykket på er og om den er det samme som den nåværende bakgrunnsfargen så endres den. 
+                    Denne måten å gjøre det på i canvas funker når bildet er såpass lite komplekst. Om bildet hadde bestått av mange tusen forskjellige elementer
+                    hadde det mest effektive vært å bare tegnet over de stedene du vil oppdatere isteden for å tegne hele bildet på nytt.
+                    Jeg har valgt å la bildene alltid være på 500x500 piksler, da jeg slet med å finne ut hvordan man skalerer en SVG.
                 </p>
 
                 <h3>jQuery:</h3>
@@ -75,22 +76,23 @@
                     Da jeg begynte å skjønne hvordan ting funket gikk alt mye fortere. 
                     Det jeg hovedsaklig brukte jQuery til var å sjekke om bildene hadde musepekeren over seg og om de hadde det endret jeg bildene, 
                     dette gjorde jeg ved å sjekke om :hover attributtet til bildene var satt på true. 
+                    For å sjekke at brukeren trykker på bildene brukte jeg bare click() metoden.
                     Jeg brukte også jQuery til å endre display-staten til dokumentasjonen når man trykker på dokumentasjonknappen, 
                     jeg brukte toggle() funksjonen til å gjemme/vise dokumentasjonen.
                 </p>
 
                 <h3>Cross-browser testing:</h3>
                 <p>
-                    Jeg utførte testing i to nettlesere, Firefox og Safari. 
+                    Jeg utførte testing i tre nettlesere, Firefox, Safari og Chrome. 
                     Måten jeg gjorde det på var å først skrive en kort oppsummering av all hovedfunksjonaliteten til nettsiden, som var:
                     <ol>
                         <li>At bildene endret seg når du har musepekeren over de.</li>
                         <li>At dokumentasjonen vises når du trykker på dokumentasjonknappen.</li>
                         <li>At nettsiden endres til at alt er på en kolonne om du har en mindre skjerm.</li>
                     </ol>
-                    Deretter åpnet jeg nettsiden i begge nettleserene, og sjekket at hvert punkt funket. Jeg kom fram til at det funket i begge nettleserne. 
+                    Deretter åpnet jeg nettsiden i alle nettleserene, og sjekket at hvert punkt funket. Jeg kom fram til at det funket i alle nettleserne. 
                     Dette mener jeg var den beste måten å teste på siden da visste jeg akkurat hva jeg skulle teste før jeg startet, 
-                    og jeg fikk sammenlignet nettsidens funksjonalitet i begge nettleserene. 
+                    og jeg fikk sammenlignet nettsidens funksjonalitet i nettleserne. 
                 </p>
 
                 <h3>Kilder:</h3>

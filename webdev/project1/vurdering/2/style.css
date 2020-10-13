@@ -1,0 +1,57 @@
+body{
+    background-image: url("background.jpg");
+    backdrop-filter: blur(10px);
+
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 65%;
+    margin: auto;
+    background-color: #e0dbd4e3;
+    
+}
+
+
+
+#click{
+    background-color: #e7e7e7; 
+    border: none;
+    color: rgba(117, 113, 113, 0.699);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+h2 {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-family: Georgia, serif;
+    font-size: x-large;
+
+}
+h4 {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-family: Georgia, serif;
+    font-size: large;
+}
+p{
+    font-family: Arial, Helvetica;
+    margin-bottom: 2em;
+    margin: auto;
+    width: 80%;
+}
+li {
+    font-family: Arial, Helvetica;
+    margin-bottom: 2em;
+    margin: auto;
+    font-size: larger;
+}

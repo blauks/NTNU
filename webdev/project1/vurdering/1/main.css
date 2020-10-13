@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+#header {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  background-color: #333;
+  color: white;
+}
+#preamble {
+  width: 60%;
+  margin: auto;
+  padding: 1.5em;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#preamble > p,
+#preamble > h2 {
+  max-width: 50%;
+  margin: auto;
+  margin-bottom: 1em;
+}
+#artwork-container {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 10vh 0 10vh 0;
+}
+
+#canvas-container,
+#svg-container {
+  width: 35%;
+  height: 100%;
+  background-color: #333;
+  margin: 1em 2.5em 1em 2.5em;
+  padding: 2em;
+}
+
+#canvas-artwork:hover,
+#svg-artwork:hover {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#svg-artwork,
+#canvas-artwork {
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+@media only screen and (max-width: 900px) {
+  #canvas-container,
+  #svg-container {
+    width: 100%;
+    height: 40%;
+  }
+  #artwork-container {
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+  #preamble {
+    width: 80%;
+  }
+  #preamble > p {
+    max-width: 100%;
+  }
+  #documentation {
+    width: 100% !important;
+  }
+}
+#documentation-container {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 5em;
+}
+#show-docs-button {
+  float: right;
+  padding: 1em;
+  border: none;
+  text-transform: uppercase;
+  background-color: lightblue;
+  margin: 5em;
+}
+#documentation {
+  width: 50%;
+  display: none;
+}
+
+.title {
+  text-align: center;
+  padding: 1em;
+  background-color: lightslategray;
+  color: white;
+}

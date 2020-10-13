@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Independent artwork</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <h1>Independent artwork inc.</h1>
+    </div>
+    <div id="preamble">
+      <h2>About me</h2>
+      <p>
+        I'm one of the only independent artists left in the world that really
+        care about their passion. I work as hard as I can to bring the world
+        what they need, which of course is my art. If you need any artwork
+        commissioned you can pay me a small fee of $250k and I might be able to
+        deliver. Shipping is obviously 10% extra cost per country it has to pass
+        through.
+      </p>
+    </div>
+    <div id="artwork-container">
+      <div id="canvas-container">
+        <canvas id="canvas-artwork"></canvas>
+        <p class="title">"Self portrait", Me, 2020</p>
+      </div>
+      <div id="svg-container">
+        <svg id="svg-artwork">
+          <circle id="svg-head" fill="white" stroke="black" />
+          <circle
+            id="svg-eye-left"
+            class="svg-eye"
+            fill="light-blue"
+            stroke="black"
+          />
+          <circle
+            id="svg-eye-right"
+            class="svg-eye"
+            fill="lightBlue"
+            stroke="black"
+          />
+          <rect id="svg-mouth" fill="black" stroke="red" />
+          <rect
+            id="svg-teeth-left"
+            class="svg-teeth"
+            fill="white"
+            stroke="black"
+          />
+          <rect
+            id="svg-teeth-right"
+            class="svg-teeth"
+            fill="white"
+            stroke="black"
+          />
+        </svg>
+        <p class="title">"Self portrait in SVG", Me, 2020</p>
+      </div>
+    </div>
+    <div id="documentation-container">
+      <button id="show-docs-button">Show documentation</button>
+      <div id="documentation">
+        <div>
+          <h3>Grid/Flexbox</h3>
+          <p>
+            For this project I didn't have any need for using grid due to not
+            having to constrain elements in more than one dimension. Therefore I
+            settled with flexbox to set most of my layout. Whenever the screen
+            is smaller than 900px it will allow the elements to wrap instead of
+            being horizontally aligned. It will also scale the artworks to use
+            more of the screen so they are easier to watch on mobile devices.
+          </p>
+        </div>
+        <div>
+          <h3>HTML Canvas and SVG</h3>
+          <p>
+            I started out creating the SVG artwork. By basing all the
+            coordinates of the container size I was able to create a scalable
+            artwork that will work on large and small devices. This is done by
+            re-drawing the artwork whenever the window size changes. As each SVG
+            element is created in the HTML I can access it by giving it an ID,
+            which makes handling on-click events really simple. As it is SVG it
+            will also look pretty good when zoomed in, compared to canvas which
+            doesn't scale well when zoomed in due to it being based on pixels.
+            <br />
+            <br />
+            The canvas artwork does not look identical to the SVG artwork. This
+            is due to a limitation of canvas which doesn't let it use border
+            radius for rectangles. This could be bypassed by creating a custom
+            shape, but as I wanted both artworks to use the same base shapes for
+            all the elements this wasn't possible.
+          </p>
+        </div>
+        <div>
+          <h3>jQuery</h3>
+          <p>
+            As I do have some previous experience with jQuery, it wasn't that
+            hard to use it again several years later. I've used jQuery for most
+            of my code, but I did have some functionality that wasn't that well
+            supported by jQuery where I used vanilla JavaScript instead. I find
+            that jQuery is really useful for creating websites such as this, as
+            it does shorten the code a lot, especially when referencing several
+            elements by their ID.
+            <br />
+            <br />
+            My code did not have to be as long as it is, but as I wanted to make
+            sure that both the artworks were responsive I decided to put some
+            extra effort into the code to make sure that they would both scale
+            appropriately to different screen sizes.
+          </p>
+        </div>
+        <div>
+          <h3>Cross-browser testing</h3>
+          <p>
+            When testing for different browsers I decided to go with Google
+            Chrome which is my main browser which I developed this project in,
+            and also the new Microsoft Edge to test how well their new browser
+            works with the functionality I've implemented. They do look and
+            behave identically on both browsers for all screen sizes and
+            resolutions.
+          </p>
+        </div>
+        <div>
+          <h3>Useful links I've used</h3>
+          <ul>
+            <li>
+              <a href="https://www.w3schools.com/html/html5_canvas.asp"
+                >HTML Canvas Graphics, w3schools</a
+              >
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/html/html5_svg.asp"
+                >HTML SVG Graphics, w3schools</a
+              >
+            </li>
+            <li>
+              <a href="https://api.jquery.com/">jQuery API, jQuery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>

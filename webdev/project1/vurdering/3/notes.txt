@@ -1,0 +1,70 @@
+Hvordan samsvarer prosjektet med kravene til innhold og funksjonalitet på websiden. Gi en beskrivende vurdering (min 50 ord).
+
+Krav til innhold og funksjonalitet på websiden
+
+Følgende elementer skal være med på websiden (heretter kalt side-elementer):
+
+    Litt informasjon om «kunstneren» (ikke bruk ditt eget navn siden medstudenter skal se over oppgaven).
+    Selve bildene (og tittel på bildene).
+
+    Bildene skal ha en viss kompleksitet, men ikke større enn at den kan kodes manuelt eller med enkel programmering (minimum 5 elementer med litt variasjon i både type og fargelegging). 
+    Figuren skal være demonstrere en form for interaktivitet, eksempelvis ha figur-elementer som skifter farge eller størrelse ved mouseover eller annen brukerinteraksjon. 
+
+    Nederst på siden skal du ha en knapp eller annet klikkbart element for å vise/skjule dokumentasjon (se lenger ned for beskrivelse av hva som skal dokumenteres). 
+
+    Siden som helhet skal ha et «godt» design (som selvsagt er vanskelig å definere hva er, men vi ser etter om det er en "ide" bak utformingen og ikke bare noe som er basert på default HTML utseende). Eksempelvis bør du ha gjennomført bruk av fonter og fornuftig bruk av fontstørrelse, ryddig layout av side-elementene med passe mellomrom og at side-elementene er plassert fornuftig i forhold til hverandre. God bruk av marger etc. 
+    Siden skal vise god forståelse for interaktivitet - og løsningene for interaktiv grafikk.
+    Siden skal fungere godt med tanke på at vinduets størrelse endrer seg / forskjellig skjermstørrelse etc.
+
+Nettsiden starter med en kort introduksjon til kunsteren, etterfulgt av et SVG bilde og et canvas bilde. Begge bildene består av flere former i varierte farger. 
+Når man har musepekeren over bildene vil fargene inverteres, mens om man trykker på knappen under hverken av bildene vil det spilles av en animasjon. 
+Under bildene er det en knapp for å vise og skjule dokumentasjonen til prosjektet. Dette vil da si at alle krav om elementer på nettsiden er innfridd.
+Nettsiden har et veldig godt og oversiktig design ved å ha alt sentrert, også bildene side-om-side. Dette gjør det veldig lett å lese/se gjennom nettsiden.
+De eneste interaktive mulighetene du har er å ha musepekeren over et av bildene, og å trykke på en knapp for å kjøre en animasjon. 
+Dette viser bare litt forståelse for interaktivitet, skulle gjerne hatt noe mer avansert f.eks. om man trykker på stjernen i midten vil bare den bytte farge. 
+Nettsiden fungerer veldig bra med tanke på skjermens størrelse. Om skjermen blir for liten vil bildene legges over hverandre, og i tillegg vil bildene bli mindre. Pluss at om skjermen blir bredere blir også bildene bredere.
+
+-----
+
+Hvordan samsvarer prosjektet med kravene til bruk av teknologi. Gi en beskrivende vurdering (min 50 ord).
+
+Krav til bruk av teknologi
+
+    Bruk av SVG (Scalable Vector Graphics) for ett av bildene
+    Bruk av HTML5 canvas og canvas-apiet for opptegning av ett av bilden
+    Bruk av CSS-grid og/eller CSS Flexbox for layout av side-elementene
+    Bruk av jQuery-biblioteket
+
+Prosjektet har to bilder, hvor det ene er laget med SVG og det andre er laget med HTML5 canvas og canvas-apiet. I dette prosjektet er bare CSS grid brukt for å skape layoutet.
+jQuery er brukt for å sjekke om bildene har musepekeren over seg for å så endre farge, i tillegg brukes også jQuery for å legge til en shadow-effect på knappene når man
+har musepekeren på de. Dette vil da si at prosjektet har klart å bruke alt av krav knyttet til teknologi.
+
+-----
+
+Hvordan samsvarer prosjektet med kravene til testing. Gi en beskrivende vurdering (min 20 ord).
+
+Krav til testing
+
+    Websiden skal fungere og ha lik oppførsel i forskjellige weblesere for pc. 
+    Du skal teste i minimum to forskjellige weblesere (bruk de mest vanlige som Safari, Edge, Firefox, Chrome, ...).
+
+Jeg finner ikke noe informasjon om hvordan testene ble fullført i dette prosjektet, virker som at det ble glemt.
+
+-----
+
+Hvor godt viser prosjektet at læringsmålene er innfridd?
+
+Læringsmål for oppgaven
+
+    Videregående kunnskap og ferdigheter i HTML, CSS, Javascript.
+    God kunnskap om layout-problematikken for web-sider og løsningene CSS-grid og CSS-flexbox. 
+    Ferdigheter i å designe websider med flytende layout av side-elementene.
+    Grunnleggende kunnskap om bruk av 2D-grafikk på websider. Skal kjenne til både SVG brukt i HTML-dokumenter og HTML5 canvas.
+    Ferdigheter i å lage enkel grafikk og videregående ferdigheter i programmering av interaktive elementer i HTML.
+    Grunnleggende kunnskap om jQuery: hvilke programmerings-utfordringer biblioteket er ment å forenkle, hovedtyper av funksjonalitet som biblioteket tilbyr.
+    Kjenne til cross-browser testing og utføre enkle tester. 
+    Ferdighet i å finne og nyttiggjøre seg relevant og god dokumentasjon og ta kontroll over egen læring.  
+
+Prosjektet viser veldig god forståelse for de fleste læringsmålene som ble oppgitt. Hele nettsiden er ryddig med et godt design, koden er ryddig og oversiktlig med kommentarer som forklarer vanskelig kode og 
+jQuery er brukt på en effektiv måte for å legge inn interaktivtet på nettsiden.
+Det eneste som mangler i prosjektet er hvordan testingen ble utført, og derfor blir dette læringsmålet ikke innfridd.

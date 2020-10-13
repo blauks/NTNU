@@ -3,6 +3,9 @@ $(document).ready(documentReady());
 let backgroundColours = ["#fa8072", "#f5f5dc", "#a52a2a", "#fff8dc", "#5f9ea0", "#f8f8ff", "#fffff0"];
 let currentColour = backgroundColours[0];
 
+let canvasColourI = 0;
+let svgColourI = 0;
+
 function draw(mod, backgroundColour) {
     let canvas = document.getElementById("canvasDrawing");
     let ctx = canvas.getContext('2d');
@@ -61,13 +64,19 @@ function draw(mod, backgroundColour) {
 }
 
 function documentReady() {
-    $(".documentationButton").click(function () { $(".documentation").toggle() });
+    $(".documentationButton").click(function () { 
+        $(".documentation").toggle()
+        $(".documentationButton").text(
+            $(".documentation").is(":visible")  ? "Hide documentation" : "Show documentation"
+        );
+    });
     
     $("#svgDrawing").hover(changeMoodOfSVGThanos);
     $("#canvasDrawing").hover(changeMoodOfCanvasThanos);
 
     $("#canvasDrawing").click(function (e) { changeBackgroundColourCanvas(e) });
-}
+    $("#svgBackground").click(changeSvgBackground) 
+}  
 
 function changeMoodOfSVGThanos() {
     if($("#svgDrawing").is(":hover")){
@@ -94,10 +103,17 @@ function changeBackgroundColourCanvas(e) {
     let y = Math.floor(e.pageY - $('#canvasDrawing').offset().top)
     let colourData = document.getElementById("canvasDrawing").getContext('2d').getImageData(x, y, 1, 1).data
     let pixelHexColour = "#"+colourData[0].toString(16)+colourData[1].toString(16)+colourData[2].toString(16)
+
     //Checks if the pixel that is pressed is the same as the background colour, and if it is the background colour changes
     //This is to make it so that you must press the background to change its colour
     if(pixelHexColour === currentColour) {
-        currentColour = backgroundColours[Math.floor(Math.random() * 6)];
+        canvasColourI = canvasColourI === 6 ? 0 : canvasColourI + 1
+        currentColour = backgroundColours[canvasColourI];
         draw(10, currentColour);
     }
+}
+
+function changeSvgBackground() {    
+    svgColourI = svgColourI === 6 ? 0 : svgColourI + 1
+    $("#svgBackground").attr("style", "fill: " + backgroundColours[svgColourI])
 }

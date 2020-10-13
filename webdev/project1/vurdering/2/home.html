@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h2 style="font-size: xx-large;">Artist</h2>
+            <p>My work explores the relationship between emerging sexualities and recycling culture. With influences as diverse as Kafka and Joni Mitchell, new synergies are manufactured from both orderly and random structures.
+
+                Ever since I was a pre-adolescent I have been fascinated by the unrelenting divergence of the universe. <br> What starts out as contemplation soon becomes corrupted into a carnival of power, leaving only a sense of dread and the dawn of a new beginning.
+                
+                As temporal replicas become reconfigured through boundaried and personal practice, the viewer is left with a testament to the limits of our culture.
+                </p>
+        </div>
+        <div class="SVG">
+            <h2>SVG version</h2>
+            <svg width="500" height="400" 
+            xmlns="http://www.w3.org/2000/svg">
+        
+            <rect width="500" height="400" style="fill:blue;stroke:black;stroke-width:0.1;"/>
+            <ellipse cx="200" cy="80" rx="70" ry="50" style="fill:rgba(63, 206, 216, 0.473);stroke:black;stroke-width:0.1;" />
+            <polygon id="left-pol" points="0,200 250,400 0,400" style="fill:green;stroke:none;stroke-width:0.1" />
+            <polygon id="right-pol" points="500,0 300,0 300,200" style="fill:grey;stroke:none;stroke-width:0.1" />
+            <polygon id="diamond-pol" points="50,100 100,150 50,200 0,150" style="fill:gold;stroke:none;stroke-width:0.1" /> 
+            
+            <circle id="l-circ" cx="394" cy="295" r="100" style="fill:black;stroke:black;stroke-width:0.1;"/>
+            <circle id="m-circ" cx="220" cy="271" r="70" style="fill:white;stroke:black;stroke-width:0.3;"/>
+            <circle id="s-circ" cx="101" cy="236" r="40" style="fill:red;stroke:none;stroke-width:0.3;"/>
+          </svg>
+
+
+        </div>
+        <div class="fun">
+            <h4>Funksjonaliteter for SVG</h4>
+            <p>På bildet over er det mulig å flytte sirklene ved å trykke og holde inn, for så å dra usepekeren rundt. Fargene på de forskjellige geometriske elementene vil endre seg dersom du drar musepekeren over</p>
+        </div>
+
+        <div class="Canvas">
+            <h2>Canvas version</h2>
+            <canvas id="myCanvas" width="500" height="400"
+            style="border:1px solid #c3c3c3;"></canvas>
+        </div>
+        <div class="fun">
+            <h4>Funksjonaliteter for Canvas</h4>
+            <p>NB! på min pc tar det tid før canvas blir vist. Vennligst vent et par sekunder dersom det også skjer med deg. Ved å flytte musepekeren over de forskjellige geometriske formene vil fargene på elementene endre seg. </p>
+        </div>
+        
+        <div class="flexbox">
+            <h2>Flexbox</h2>
+            <p>
+                For å style nettsiden og sørge for at den er skalerbart, valgte jeg å bruke flexbox med en container-div som inneholder alle andre div-ene. det gjør at 
+                alle barna til container arver egenskapene til container. Jeg har valgt å ha midtstilt nettside med elementer som står under hverandre som kan scrolles ned ettersom denne siden vil hovedsakelig bli brukt 
+                på pc-er. Siden jeg har animasjoner i SVG, gjør skaleringen at animasjonene som er beskrevet under bildet ikke fungerer som de skal. Dette er ikke tilfelle med Canvas.
+            </p>
+        </div>
+        <div class="SC">
+            <h2>SVG & Canvas</h2>
+            <h4>SVG</h4>
+            <p>SVG-illustrasjonen er hardkodet inn i HTML og manipulert fra eget javascript-fil (scriptSVG.js). Grunnen til 
+                at SVG ble lagt direkte inn i HTML er på grunn av tilgang til elementene inni SVG, noe som er et av fordelene med å bruke SVG, da det ikke var mulig å 
+                addressere svg-objektene med ID dersom SVG ble tatt inn som et bilde (<img>). I .js-filen ble animasjoner, brukerinteraksjoner, og elementer definert.</p>
+            <h4>Canvas</h4>
+                <p>Canvas ble tatt inn i HTML via et canvas element der høyde og bredde ble definert, for så å bli tegnet og manipuler i eget fil (scriptCanvas.js). </p>
+        </div>
+        <div class="jQ">
+            <h2>jQuery</h2>
+            <p>
+                Ved å bruke jquery til å hente elementer fra HTML til javascript, kortet jeg ned lengde på kode som var nødvendig på javascript. Det gjorde jobben med Eventlisteners i vanlig 
+                javascript som kan være komplisert og rotete til enkle linjer med kode som enkelt kan integreres til brukes effektivt.
+            </p>
+        </div>
+        <div class="CB">
+            <h2>cross-browser</h2>
+            <p>
+                Dette har vært en av de vanskeligste delene med tanke på at forskjellige nettlesere rendrer nettsiden forskjellig. For utviklingen av nettsiden ble Chrome brukt ettersom
+                Chrome er et av de mest populære nettsidene og som bruker chromium som blir brukt av andre nettlesere som edge, firefox osv. Etter å ha testet med Edge, fireFox og chrome viste det seg at det fungerer for alle de, men at firefox ikke støtter SVG-animasjonene.
+            </p>
+        </div>
+        <div class="IF">
+            <h2>Informasjonskilder</h2>
+            <ul>
+                <li><a href="https://api.jquery.com/">api.jquery.com</a></li>
+                <p2>Denne kilden ble hyppig brukt til å finne funksjoner som jquery tilbyr</p2> <br>
+                <li><a href="https://www.w3schools.com/graphics/svg_intro.asp">https://www.w3schools.com/graphics</a></li>
+                <p2>Denne siden ble brukt til innføring i hvordan  SVG fungerer</p2><br>
+                <li><a href="https://www.w3schools.com/html/html5_canvas.asp">www.w3schools.com/html/html5_canvas</a></li>
+                <p2>Denne siden ble brukt til innføring i canvas</p2><br>
+                <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com</a></li>
+                <p2>Denne siden ble brukt til å lære og hente inn informasjon om flex-box </p2><br>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath">https://developer.mozilla.org</a></li>
+                <p2>Denne siden ble brukt til å lære hvordan man kan manipulere elementer i canvas</p2><br>
+                <li><a href="http://jsfiddle.net/fjy9edns/">http://jsfiddle.net</a></li>
+                <p2>Denne siden ble brukt som inspirasjon til hvordan en kan løse hovering i canvas</p2>
+                
+            </ul>
+        </div>
+        <div>
+            <button id="click">Åpne/Lukk Dokumentasjon</button>
+        </div>
+    </div>
+   
+
+
+  
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(".fun").toggle();
+        $(".flexbox").toggle();
+        $(".SC").toggle();
+        $(".jQ").toggle();
+        $(".CB").toggle();
+        $(".IF").toggle();
+
+        $("#click").click(function(){
+        $(".fun").toggle();
+        $(".flexbox").toggle();
+        $(".SC").toggle();
+        $(".jQ").toggle();
+        $(".CB").toggle();
+        $(".IF").toggle();
+    });
+    </script>
+    <script src="scriptSVG.js"></script>
+    <script src="scriptCanvas.js"></script>
+ 
+</body>
+</html>

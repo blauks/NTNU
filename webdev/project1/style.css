@@ -71,10 +71,3 @@ body {
         flex-direction: column;
     }
 }
-
-@media all and (max-width: 525px) {
-    #svgDrawing {
-        height: 80%;
-        width: 80%;
-    }
-}
