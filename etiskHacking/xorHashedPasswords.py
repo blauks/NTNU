@@ -1,3 +1,4 @@
+#Insert your flag here
 flag09 = "c1f02bbd538384ebb72267d3024831ec"
 
 xored = ""
@@ -14,11 +15,13 @@ f = open("hashedPasswords.txt")
 
 for line in f.readlines():
     if line[0:2] == flag09[0:2]:
-        print(line)
         if xored != "":
             xored = xor_two_str(xored, line.strip())
         else:
             xored = line.strip()
 
 f.close()
-print(str(xored[2:]))
+if len(str(xored[2:])) == 64:
+    print(str(xored[2:]))
+else:
+    print("00"+str(xored[2:]))
