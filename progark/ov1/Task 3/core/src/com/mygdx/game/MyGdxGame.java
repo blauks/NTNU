@@ -13,42 +13,51 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import java.util.Locale;
 
 public class MyGdxGame extends ApplicationAdapter {
-	private Stage stage;
-	private Helicopter heli;
-	private BitmapFont font;
-	private SpriteBatch batch;
+    private Stage stage;
+    private Helicopter[] heli;
+    private SpriteBatch batch;
 
-	@Override
-	public void create () {
-		batch = new SpriteBatch();
+    @Override
+    public void create() {
+        batch = new SpriteBatch();
 
-		FitViewport viewport = new FitViewport(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-		stage = new Stage(viewport, batch);
-		Gdx.input.setInputProcessor(stage);
+        FitViewport viewport = new FitViewport(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        stage = new Stage(viewport, batch);
+        Gdx.input.setInputProcessor(stage);
 
-		font = new BitmapFont();
-		font.setColor(Color.WHITE);
-		font.getData().setScale(2.5f);
+        heli = new Helicopter[]{new Helicopter(100, 100), new Helicopter(50, 400, 100, 100), new Helicopter(250, 10, 200, 400), new Helicopter(120, 300, 20, 700)};
 
-		heli = new Helicopter("attackhelicopter.PNG");
-		stage.addActor(heli);
-	}
+        for (Helicopter h : heli) {
+            stage.addActor(h);
+        }
+    }
 
-	@Override
-	public void render () {
-		ScreenUtils.clear(0, 0, 0, 1);
+    @Override
+    public void render() {
+        ScreenUtils.clear(0, 0, 0, 1);
 
-		stage.act(Gdx.graphics.getDeltaTime());
-		stage.draw();
+        float delta = Gdx.graphics.getDeltaTime();
 
-		batch.begin();
-		font.draw(stage.getBatch(), String.format(Locale.UK, "x: %f, y: %f", heli.getXPos(), heli.getYPos()), 50, Gdx.graphics.getHeight() - 10);
-		batch.end();
-	}
-	
-	@Override
-	public void dispose () {
-		stage.dispose();
-		batch.dispose();
-	}
+        stage.act(delta);
+        stage.draw();
+
+        for (int x = 0; x < heli.length - 1; x++) {
+            for (int y = x + 1; y < heli.length; y++) {
+                // Funker til en viss grad:D
+                if (heli[x].getHitBox().overlaps(heli[y].getHitBox())) {
+                    heli[x].flipYDir();
+                    heli[x].flipXDir();
+                    if(heli[x].getYDir() == heli[y].getYDir()){
+                        heli[y].flipYDir();
+                    }
+                }
+            }
+        }
+    }
+
+    @Override
+    public void dispose() {
+        stage.dispose();
+        batch.dispose();
+    }
 }
