@@ -1,0 +1,54 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.mygdx.game"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml
+10
+11    <application
+11-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:5:5-23:19
+12        android:allowBackup="true"
+12-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:6:9-35
+13        android:appCategory="game"
+13-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:9:9-35
+14        android:debuggable="true"
+15        android:icon="@drawable/ic_launcher"
+15-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:7:9-45
+16        android:isGame="true"
+16-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:8:9-30
+17        android:label="@string/app_name"
+17-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:10:9-41
+18        android:testOnly="true"
+19        android:theme="@style/GdxTheme" >
+19-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:11:9-40
+20        <activity
+20-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:12:9-22:20
+21            android:name="com.mygdx.game.AndroidLauncher"
+21-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:13:13-58
+22            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout"
+22-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:16:13-107
+23            android:exported="true"
+23-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:17:13-36
+24            android:label="@string/app_name"
+24-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:14:13-45
+25            android:screenOrientation="landscape" >
+25-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:15:13-50
+26            <intent-filter>
+26-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:18:13-21:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:19:17-69
+27-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:19:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:20:17-77
+29-->/Users/jonathanbrooks/git/NTNU/progark/ov2/android/AndroidManifest.xml:20:27-74
+30            </intent-filter>
+31        </activity>
+32    </application>
+33
+34</manifest>

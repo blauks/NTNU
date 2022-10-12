@@ -1,0 +1,2 @@
+com/mygdx/game/MyGdxGame.java
+ com.mygdx.game.MyGdxGame

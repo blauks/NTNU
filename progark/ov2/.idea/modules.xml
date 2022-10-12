@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ov2.iml" filepath="$PROJECT_DIR$/.idea/modules/ov2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/ov2.android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/ov2.android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/ov2.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/ov2.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/desktop/ov2.desktop.iml" filepath="$PROJECT_DIR$/.idea/modules/desktop/ov2.desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ios/ov2.ios.iml" filepath="$PROJECT_DIR$/.idea/modules/ios/ov2.ios.iml" />
+    </modules>
+  </component>
+</project>

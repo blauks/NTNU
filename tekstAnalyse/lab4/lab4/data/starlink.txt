@@ -1,0 +1,13 @@
+A Falcon 9 lifted off from Space Launch Complex 40 at Cape Canaveral Space Force Station in Florida at 9:44 a.m. Eastern after a one-day delay because of recovery weather. The Falcon 9 upper stage deployed its payload of 46 Starlink satellites 62 minutes after liftoff, although confirmation of a successful deployment didn’t come until about 20 minutes later because of a lack of ground station coverage.
+
+The rocket’s first stage completed it eleventh flight with a landing on a droneship near the Bahamas. The stage had previously launched the Demo-2 commercial crew mission, CRS-21 cargo mission, the Anasis-2 satellite, two Transporter rideshare missions and five Starlink missions. The booster is the second in SpaceX’s fleet to have performed 11 launches.
+
+The launch was the seventh Falcon 9 mission this year, keeping the company on a pace for approximately 50 launches this year. This was the fourth Starlink launch this year, with the other launches carrying the CSG-2 radar imaging satellite for Italy, the Transporter-3 rideshare mission and a classified payload for the National Reconnaissance Office.
+
+This was the first launch since a Feb. 3 mission that placed 49 Starlink satellites into orbit. However, the company announced five days later that up to 40 of them would reenter because of a solar storm that increased atmospheric drag at the low altitudes the satellites were placed into, keeping their electric propulsion systems from raising their orbits. Ultimately 38 of the 49 satellites reentered.
+
+SpaceX took a different approach with this mission. The previous launch deployed the satellites after a single burn of the upper stage, placing the satellites into orbit with a perigee of 210 kilometers. This flight conducted a second burn to place the satellites into a near circular orbit at an altitude of about 330 kilometers. The higher altitude reduces the atmospheric drag, but may also explain why this launch carried three fewer satellites than previous recent missions.
+
+SpaceX did not discuss the loss of most of the previous set of Starlink satellites in its launch webcast, focusing attention instead on recent milestones like an update on development of its Starship vehicle and the Polaris program of private crewed missions on Crew Dragon and Starship.
+
+Another set of Starlink satellites is scheduled to launch as soon as Feb. 25 on a Falcon 9 from Vandenberg Space Force Base in California.
