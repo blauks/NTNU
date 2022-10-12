@@ -9,7 +9,7 @@ public class DesktopLauncher {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		config.width = 1600;
 		config.height = 900;
-		config.title = "Helicopter Helicopter";
+		config.title = "Pong";
 		new LwjglApplication(new MyGdxGame(), config);
 	}
 }

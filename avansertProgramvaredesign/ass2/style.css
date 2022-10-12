@@ -1,0 +1,204 @@
+html,
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px gray solid;
+  border-right: 0px;
+  border-left: 0px;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+.description {
+  margin-top: 5px;
+}
+
+.posts {
+  display: grid;
+  justify-content: space-around;
+  width: 60%;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(1, 100%);
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid gray;
+}
+
+.thumbnail:hover {
+  filter: grayscale(0.6);
+}
+
+.thumbnail:hover + #cover {
+  display: block;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(120, 120, 120, 0.6);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+}
+
+.post {
+  width: 100%;
+  position: relative;
+}
+
+.username {
+  font-size: 22px;
+}
+
+.comment {
+  color: gray;
+}
+
+#background,
+.openPostDiv {
+  display: none;
+}
+
+#background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(120, 120, 120, 0.6);
+}
+
+#commentTitle {
+  font-size: 30px;
+  color: gray;
+}
+
+.openPostDiv {
+  position: fixed;
+  width: 60%;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+#openPostImg {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#openPostContent {
+  margin-top: 0;
+  background-color: white;
+  height: 100%;
+}
+
+#openPostText {
+  margin: 0;
+  padding: 0;
+}
+
+#noPosts {
+  color: gray;
+  font-size: 24px;
+}
+
+#usernameFields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+#followButton {
+  height: 30px;
+  width: 100px;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  background-color: lightseagreen;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+#followButton:active {
+  color: gray;
+}
+
+#cover {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  float: left;
+  color: white;
+  display: none;
+}
+
+#coverText {
+  width: 110%;
+}
+
+#realName {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+#profilePic {
+  border-radius: 100%;
+  height: 175px;
+}
+
+#searchBar {
+  width: 380px;
+  height: 25px;
+}
+
+#userStats {
+  display: flex;
+  flex-direction: row;
+  width: 120%;
+  justify-content: space-between;
+}
+
+#username {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+#followedBy {
+  font-size: 10px;
+}
+
+#logo {
+  width: 100px;
+}
